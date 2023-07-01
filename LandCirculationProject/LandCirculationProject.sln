@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LandCirculationWebApi", "LandCirculationWebApi.csproj", "{23052A66-223F-444B-A5D7-449DE423C0E4}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LandCirculationDatabase", "..\LandCirculationDatabase\LandCirculationDatabase.sqlproj", "{094DCCF7-9848-48C4-BD55-060965104366}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "..\Common\Common.csproj", "{322F35C2-2994-4708-A20A-616C9FE6D159}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LandCirculationDataAccess", "..\LandCirculationDataAccess\LandCirculationDataAccess.csproj", "{08E28B8A-ACBC-476F-B793-E3E25469ADFC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Snowflake.Net", "..\Snowflake.Net\Snowflake.Net.csproj", "{404A4642-4D59-43FF-89FC-85E0085D35D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertTestData", "..\InsertTestData\InsertTestData.csproj", "{474FC791-59B6-4527-B6BF-998C61860525}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23052A66-223F-444B-A5D7-449DE423C0E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23052A66-223F-444B-A5D7-449DE423C0E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23052A66-223F-444B-A5D7-449DE423C0E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23052A66-223F-444B-A5D7-449DE423C0E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{094DCCF7-9848-48C4-BD55-060965104366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{094DCCF7-9848-48C4-BD55-060965104366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{094DCCF7-9848-48C4-BD55-060965104366}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{094DCCF7-9848-48C4-BD55-060965104366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{094DCCF7-9848-48C4-BD55-060965104366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{094DCCF7-9848-48C4-BD55-060965104366}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{322F35C2-2994-4708-A20A-616C9FE6D159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322F35C2-2994-4708-A20A-616C9FE6D159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322F35C2-2994-4708-A20A-616C9FE6D159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322F35C2-2994-4708-A20A-616C9FE6D159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08E28B8A-ACBC-476F-B793-E3E25469ADFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08E28B8A-ACBC-476F-B793-E3E25469ADFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08E28B8A-ACBC-476F-B793-E3E25469ADFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08E28B8A-ACBC-476F-B793-E3E25469ADFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{404A4642-4D59-43FF-89FC-85E0085D35D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{404A4642-4D59-43FF-89FC-85E0085D35D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{404A4642-4D59-43FF-89FC-85E0085D35D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{404A4642-4D59-43FF-89FC-85E0085D35D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{474FC791-59B6-4527-B6BF-998C61860525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{474FC791-59B6-4527-B6BF-998C61860525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{474FC791-59B6-4527-B6BF-998C61860525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{474FC791-59B6-4527-B6BF-998C61860525}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26E6BB53-3043-4252-9636-9294B6EDE753}
+	EndGlobalSection
+EndGlobal

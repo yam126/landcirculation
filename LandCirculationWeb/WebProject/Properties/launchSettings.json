@@ -1,0 +1,45 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      //"applicationUrl": "http://192.168.3.143:17716",
+      "applicationUrl": "http://localhost:17726",
+      //"applicationUrl": "http://192.168.1.23:17716",
+      //"applicationUrl": "http://192.168.1.17:17716",
+      //"applicationUrl": "http://192.168.1.26:17716",
+      //"applicationUrl": "http://192.168.1.14:17716",
+      //"applicationUrl": "http://8.142.16.236:6004",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "LandCirculationWeb": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      //"applicationUrl": "http://192.168.3.143:5007",
+      "applicationUrl": "http://localhost:5110"
+      //"applicationUrl": "http://192.168.1.17:5007"
+      //"applicationUrl": "http://192.168.1.26:5007"
+      //"applicationUrl": "http://192.168.1.9:5007"
+      //"applicationUrl": "http://192.168.1.14:5007"
+      //"applicationUrl": "http://8.142.16.236:6004"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "publishAllPorts": true
+    }
+  }
+}

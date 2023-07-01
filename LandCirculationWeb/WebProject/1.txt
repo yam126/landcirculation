@@ -1,0 +1,7 @@
+﻿namespace Farm
+{
+    public class _1
+    {
+    var a = 1;
+    }
+}

@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\LandCirculationDataAccess\LandCirculationDataAccess.csproj" />
+    <ProjectReference Include="..\LandCirculationProject\LandCirculationWebApi.csproj" />
+    <ProjectReference Include="..\Snowflake.Net\Snowflake.Net.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="dll\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ePioneer.Data.Kernel">
+      <HintPath>dll\ePioneer.Data.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="ePioneer.Data.Utils">
+      <HintPath>dll\ePioneer.Data.Utils.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

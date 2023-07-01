@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LandCirculationWebApi</name>
+    </assembly>
+    <members>
+        <member name="T:LandCirculationWebApi.Controllers.LargeGrainController">
+            <summary>
+            种粮大户
+            </summary>
+        </member>
+        <member name="F:LandCirculationWebApi.Controllers.LargeGrainController.m_repository">
+            <summary>
+            数据库操作类
+            </summary>
+        </member>
+        <member name="F:LandCirculationWebApi.Controllers.LargeGrainController.m_mapper">
+            <summary>
+            AutoMapper参数映射类
+            </summary>
+        </member>
+        <member name="F:LandCirculationWebApi.Controllers.LargeGrainController.m_webHostEnvironment">
+            <summary>
+            获取网站路径
+            </summary>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainController.#ctor(LandCirculationDataAccess.IMOIRepository,AutoMapper.IMapper,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            重载构造函数
+            </summary>
+            <param name="repository">数据库操作类</param>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainController.GetPage(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.String,System.String,System.String)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="pageIndex">当前页(默认从1开始)</param>
+            <param name="pageSize">每页记录数(默认每页10条)</param>
+            <param name="where">查询条件(SQL查询条件,可以为空,为空返回所有数据)</param>
+            <param name="year">年代编号</param>
+            <param name="plnatArea">种植面积</param>
+            <param name="plnatAreaCondition">种植面积条件</param>
+            <param name="SortField">排序字段(默认创建时间)</param>
+            <param name="SortMethod">排序方法[DESC|ASC(默认DESC)]</param>
+            <returns>返回查询结果</returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainController.largeGrainStatistics">
+            <summary>
+            年份统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainController.villageStatistics(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            村庄年份统计
+            </summary>
+            <param name="Year">年份统计</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainController.largeGrainDetailStatistics(System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            种粮大户详细统计信息
+            </summary>
+            <param name="Year">年份</param>
+            <param name="Village">村庄</param>
+            <returns>返回值</returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainController.getLargeGrainAllYear">
+            <summary>
+            获得所有年份
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainController.AddData(LandCirculationWebApi.Models.LargeGrainParameter)">
+            <summary>
+            添加数据
+            </summary>
+            <param name="parameter">添加参数</param>
+            <returns>返回结果</returns>        
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainController.ImportExcel(Microsoft.AspNetCore.Http.IFormCollection)">
+            <summary>
+            导入Excel文件
+            </summary>
+            <param name="formFile">上传的Excel文件</param>
+            <returns></returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainController.ModifyData(System.String,LandCirculationWebApi.Models.LargeGrainParameter)">
+            <summary>
+            修改数据
+            </summary>
+            <param name="parameter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainController.DeleteData(System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="IDStr">数据编号字符串ID的形式[123-456-678]</param>
+            <returns>是否成功消息</returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainController.GetPlnatAreaCondition(System.Nullable{System.Decimal},System.String)">
+            <summary>
+            获得种植面积条件
+            </summary>
+            <param name="plnatArea">种植面积</param>
+            <param name="plnatAreaCondition">条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainController.SaveData(System.String,LandCirculationWebApi.Models.LargeGrainParameter,Snowflake.Net.IdWorker)">
+            <summary>
+            保存数据
+            </summary>
+            <param name="SaveMethod">[Add|Edit]</param>
+            <param name="parameter">参数</param>
+            <returns>返回结果</returns>
+        </member>
+        <member name="F:LandCirculationWebApi.Controllers.LargeGrainExcelController.m_repository">
+            <summary>
+            数据库操作类
+            </summary>
+        </member>
+        <member name="F:LandCirculationWebApi.Controllers.LargeGrainExcelController.m_mapper">
+            <summary>
+            AutoMapper参数映射类
+            </summary>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainExcelController.#ctor(LandCirculationDataAccess.IMOIRepository,AutoMapper.IMapper)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="repository">数据库操作类</param>
+            <param name="_mapper">AutoMapper参数映射类</param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainExcelController.ExportExcel(System.String,System.String,System.String,System.String,System.Nullable{System.Decimal},System.Nullable{System.Decimal},System.String,System.String)">
+            <summary>
+            导出Excel
+            </summary>
+            <param name="selectedIDStr">选择要导出的编号</param>
+            <param name="where">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.LargeGrainExcelController.GetPlnatAreaCondition(System.Nullable{System.Decimal},System.String)">
+            <summary>
+            获得种植面积条件
+            </summary>
+            <param name="plnatArea">种植面积</param>
+            <param name="plnatAreaCondition">条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.VipInfoController.GetPage(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            (分页)查询种植大户
+            </summary>
+            <param name="pageIndex">当前页索引（从1开始）</param>
+            <param name="pageSize">页面记录数</param>
+            <param name="where">SQL条件</param>
+            <param name="orderBy">SQL排序</param>
+            <returns>(分页)种植大户数组</returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.VipInfoController.GetArray(System.String)">
+            <summary>
+            (条件)查询种植大户
+            </summary>
+            <param name="where">SQL条件</param>
+            <returns>种植大户数组</returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.VipInfoController.Get(System.Int64)">
+            <summary>
+            跟据Id获取种植大户
+            </summary>
+            <param name="id">种植大户id</param>
+            <returns>种植大户</returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.VipInfoController.GetLandById(System.Int64)">
+            <summary>
+            跟据Id获取种植大户的地块
+            </summary>
+            <param name="id">种植大户id</param>
+            <returns>种植大户</returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.VipInfoController.GetLand(System.String)">
+            <summary>
+            获取全部种植大户的地块
+            </summary>
+            <param name="where"> where</param>
+            <returns>种植大户</returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.VipInfoController.Add(LandCirculationDataAccess.Models.AddVipInfo)">
+            <summary>
+            添加种植大户
+            </summary>
+            <param name="VipInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.VipInfoController.AddLand(LandCirculationDataAccess.Models.AddVipInfoLand)">
+            <summary>
+            添加种植大户的地块
+            </summary>
+            <param name="VipInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.VipInfoController.UpdateVipInfo(LandCirculationDataAccess.Models.UpdateVipInfo)">
+            <summary>
+            修改种植大户
+            </summary>
+            <param name="VipInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.VipInfoController.UpdateVipInfoLand(LandCirculationDataAccess.Models.UpdateVipInfoLand)">
+            <summary>
+            修改种植大户
+            </summary>
+            <param name="VipInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.VipInfoController.Delete(System.Int64)">
+            <summary>
+            删除种植大户
+            </summary>
+            <param name="id">种植大户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:LandCirculationWebApi.Controllers.VipInfoController.DeleteLand(System.Int64)">
+            <summary>
+            删除种植大户的地块
+            </summary>
+            <param name="id">种植大户地块的id</param>
+            <returns></returns>
+        </member>
+        <member name="M:LandCirculationWebApi.MappingProfile.#ctor">
+            <summary>
+            构造函数(用于添加需要映射的类对应关系)
+            </summary>
+        </member>
+        <member name="T:LandCirculationWebApi.Models.LargeGrainParameter">
+            <summary>
+            种粮大户信息表
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.RecordId">
+             <summary>
+            编号
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.LargeGrainName">
+             <summary>
+            种粮大户姓名
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.Village">
+             <summary>
+            所属村子
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.IDCard">
+             <summary>
+            身份证
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.ContactMobile">
+             <summary>
+            联系电话
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.PlantingArea">
+             <summary>
+            种植面积
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.FamilyFarm">
+             <summary>
+            家庭农场
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.CoopeRative">
+             <summary>
+            合作社
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.Backup01">
+             <summary>
+            备用字段01
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.Backup02">
+             <summary>
+            备用字段02
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.Backup03">
+             <summary>
+            备用字段03
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.Created">
+             <summary>
+            创建人
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.CreatedTime">
+             <summary>
+            创建时间
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.Modifer">
+             <summary>
+            修改人
+             </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.LargeGrainParameter.ModifedTime">
+             <summary>
+            修改时间
+             </summary>
+        </member>
+        <member name="T:LandCirculationWebApi.Models.Result.Result">
+            <summary>
+            普通添加修改返回值
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.Result.Status">
+            <summary>
+            状态（0正确，非0错误）
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.Result.Msg">
+            <summary>
+            错误提示信息
+            </summary>
+        </member>
+        <member name="T:LandCirculationWebApi.Models.Result.EntityResult`1">
+            <summary>
+            带数据返回
+            </summary>
+            <typeparam name="T">返回数据类型</typeparam>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.EntityResult`1.Status">
+            <summary>
+            状态（0正确，非0错误）
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.EntityResult`1.Msg">
+            <summary>
+            错误提示信息
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.EntityResult`1.Result">
+            <summary>
+            返回数据
+            </summary>
+        </member>
+        <member name="T:LandCirculationWebApi.Models.Result.ArrayResult`1">
+            <summary>
+            返回数组
+            </summary>
+            <typeparam name="T">要返回的数组类型</typeparam>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.ArrayResult`1.Status">
+            <summary>
+            状态（0正确，非0错误）
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.ArrayResult`1.Msg">
+            <summary>
+            错误提示信息
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.ArrayResult`1.Result">
+            <summary>
+            返回的数组
+            </summary>
+        </member>
+        <member name="T:LandCirculationWebApi.Models.Result.ListResult`1">
+            <summary>
+            List返回值
+            </summary>
+            <typeparam name="T">返回的数据类型</typeparam>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.ListResult`1.Status">
+            <summary>
+            状态（0正确，非0错误）
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.ListResult`1.Msg">
+            <summary>
+            错误提示信息
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.ListResult`1.Result">
+            <summary>
+            返回的List
+            </summary>
+        </member>
+        <member name="T:LandCirculationWebApi.Models.Result.PageResult`1">
+            <summary>
+            分页返回值
+            </summary>
+            <typeparam name="T">返回的数据类型</typeparam>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.PageResult`1.Status">
+            <summary>
+            状态（0正确，非0错误）
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.PageResult`1.Msg">
+            <summary>
+            错误提示信息
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.PageResult`1.PageCount">
+            <summary>
+            页面记录数
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.PageResult`1.RecordCount">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.PageResult`1.Result">
+            <summary>
+            分页的每页数据
+            </summary>
+        </member>
+        <member name="T:LandCirculationWebApi.Models.Result.AveragePrice">
+            <summary>
+            平均价格
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.AveragePrice.CropsName">
+            <summary>
+            农作物名称
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.AveragePrice.YearsData">
+            <summary>
+            年份数据
+            </summary>
+        </member>
+        <member name="P:LandCirculationWebApi.Models.Result.AveragePrice.PriceData">
+            <summary>
+            价格数据
+            </summary>
+        </member>
+    </members>
+</doc>

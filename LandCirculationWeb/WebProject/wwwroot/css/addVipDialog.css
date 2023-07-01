@@ -1,0 +1,72 @@
+﻿.addVipDialog {
+    width: 25vw;
+    height: 57vh;
+}
+
+    .addVipDialog .dialogPanel {
+        width:98%;
+        height:46vh;
+        margin-bottom:5vh;
+        border:1px solid red;
+    }
+
+        .addVipDialog .dialogPanel .line-container {
+            width:98%;
+            height:3.7vh;
+            margin-top:1vh;
+            margin-left:1%;
+            background-color:#ffffff;
+            border-radius:8px;
+            /*border:1px solid red;*/
+        }
+
+            .addVipDialog .dialogPanel .line-container .label {
+                min-width: 4vw;
+                width: auto !important;
+                height: 3vh;
+                line-height:3vh;
+                font-family: "Microsoft YaHei UI";
+                font-size: 1.5vh;
+                color: #37799f; 
+                margin-left:0.5vw;
+                margin-top: 0.3vh;
+                text-align: center;
+                border: 0px solid red;
+                float: left;
+            }
+
+            .addVipDialog .dialogPanel .line-container .label-must {
+                min-width: 4vw;
+                width: auto !important;
+                height: 3vh;
+                line-height: 3vh;
+                font-family: "Microsoft YaHei UI";
+                font-size: 1.5vh;
+                color: #e60e0e;
+                margin-left: 0.5vw;
+                margin-top: 0.3vh;
+                text-align: center;
+                border: 0px solid red;
+                float: left;
+            }
+
+            .addVipDialog .dialogPanel .line-container .input-container {
+                min-width: 16.6vw;
+                width: auto !important;
+                height: 3vh;
+                margin-left: 0.2vw;
+                margin-top: 0.3vh;
+                float: left;
+                border: 0px solid red;
+            }
+
+                .addVipDialog .dialogPanel .line-container .input-container .el-input-custom {
+                    border-radius: 5px;
+                    height: 3vh;
+                    margin-top: 0vh;
+                    background-color: #092166;
+                }
+
+                .addVipDialog .dialogPanel .line-container .input-container .el-input-custom input {
+                    height:3vh;
+                }

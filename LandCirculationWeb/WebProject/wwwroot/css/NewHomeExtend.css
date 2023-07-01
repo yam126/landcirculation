@@ -1,0 +1,938 @@
+﻿.amap-container {
+    position: relative;
+    width: 98vw;
+    height: 84vh;
+    margin-top: -1%;
+    margin-left: 1.2%;
+    float: left;
+    border: 1px solid #00bbff;
+}
+
+    .amap-container .amap-container-center {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        z-index: 5;
+    }
+
+    .amap-container .PlantingStatistics {
+        position: absolute;
+        top: 1vh;
+        left: 1vw;
+        width: 21vw;
+        height: 28vh;
+        z-index: 1300;
+        /*background-color: rgba(18, 77, 197, 0.447058823529412);*/
+        border: 0px solid rgba(121, 121, 121, 1);
+        /*border-radius: 15px;*/
+    }
+
+        .amap-container .PlantingStatistics .title {
+            width: 103%;
+            height: 6vh;
+            line-height: 6vh;
+            float: left;
+            margin: 0 auto;
+            position: relative;
+            background-image: url(/images/newhome/border_top.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 99% 99%;
+        }
+
+            .amap-container .PlantingStatistics .title .title-text {
+                width: 78%;
+                height: 76%;
+                line-height: 279%;
+                margin-top: 2%;
+                margin-left: 7%;
+                border: 0px solid red;
+                font-family: 'Microsoft YaHei';
+                font-size: 2vh;
+                font-weight: 700;
+                text-align: left;
+                color: #DDEAFE;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+        .amap-container .PlantingStatistics .chartStatistics {
+            width: 103%;
+            height: 19vh;
+            margin-left: 0%;
+            margin-top: -0.2%;
+            border: 0px none;
+            background-image: url(/images/newhome/border_middle.png);
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-size: 99% 99%;
+            float: left;
+        }
+
+            .amap-container .PlantingStatistics .chartStatistics .center {
+                width: 92%;
+                height: 21vh;
+                margin-top: 1.6%;
+                margin-left: 5%;
+                margin-right: 1%;
+                float: left;
+            }
+
+        .amap-container .PlantingStatistics .bottom-container {
+            width: 103%;
+            height: 2vh;
+            float: left;
+            margin: 0 auto;
+            border: 0px;
+            background-image: url(/images/newhome/border_bottom.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 99% 99%;
+        }
+
+    .amap-container .PlantingAreaSearchList {
+        position: absolute;
+        top: 1vh;
+        left: 76vw;
+        width: 22vw;
+        height: 28vh;
+        z-index: 2065;
+        /*background-color: rgba(18, 77, 197, 0.447058823529412);*/
+        /*border: 1px solid rgba(121, 121, 121, 1);*/
+        /*border-radius: 15px;*/
+    }
+
+        .amap-container .PlantingAreaSearchList .title {
+            width: 99%;
+            height: 6vh;
+            line-height: 6vh;
+            float: left;
+            margin: -1% auto;
+            position: relative;
+            background-image: url(/images/newhome/border_top.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 99% 99%;
+        }
+
+            .amap-container .PlantingAreaSearchList .title .title-text {
+                width: 78%;
+                height: 76%;
+                line-height: 279%;
+                margin-top: 2%;
+                margin-left: 7%;
+                border: 0px solid red;
+                font-family: 'Microsoft YaHei';
+                font-size: 2vh;
+                font-weight: 700;
+                text-align: left;
+                color: #DDEAFE;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+        .amap-container .PlantingAreaSearchList .main {
+            width: 99%;
+            height: 19vh;
+            font-family: "Microsoft YaHei UI";
+            font-size: 1.2vw;
+            color: #ffffff;
+            text-align: center;
+            margin-left: 0%;
+            margin-top: 0%;
+            border: 0px none;
+            background-image: url(/images/newhome/border_middle.png);
+            background-repeat: repeat-y;
+            background-position: center center;
+            background-size: 99% 99%;
+            float: left;
+        }
+
+        .amap-container .PlantingAreaSearchList .bottom-container {
+            width: 99%;
+            height: 2vh;
+            float: left;
+            margin: 0 auto;
+            border: 0px;
+            background-image: url(/images/newhome/border_bottom.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 99% 99%;
+        }
+
+        .amap-container .PlantingAreaSearchList .main .center {
+            width: 92%;
+            height: 18vh;
+            margin-top: 1vh;
+            margin-left: 1vw;
+            border: 0px solid red;
+        }
+
+            .amap-container .PlantingAreaSearchList .main .center .SearchItem {
+                width: 46%;
+                height: 3vh;
+                line-height: 3vh;
+                margin-top: 5.5%;
+                margin-left: 2.3%;
+                font-family: "Microsoft YaHei UI";
+                font-size: 0.8vw;
+                color: #ffffff;
+                cursor: pointer;
+                text-align: center;
+                position: relative;
+                float: left;
+                /*background-color: #09284c52;*/
+                /*box-shadow: 6px 6px 8px 3px #377dd557 inset, 6px -5px 5px 3px #377dd557 inset, -6px -5px 5px 3px #377dd557 inset;*/
+                /*border-radius: 10px;*/
+                /*border: 1px solid #357CB2;*/
+                border: 1px solid #0F51C9;
+                background-color: #00377791;
+            }
+
+                .amap-container .PlantingAreaSearchList .main .center .SearchItem .top-left-corner {
+                    width: 0.3vw;
+                    height: 0.5vh;
+                    position: absolute;
+                    top: -0.3vh;
+                    left: -0.2vw;
+                    background-color: #0F51C9;
+                }
+
+                .amap-container .PlantingAreaSearchList .main .center .SearchItem .top-right-corner {
+                    width: 0.3vw;
+                    height: 0.5vh;
+                    position: absolute;
+                    top: -0.3vh;
+                    left: 8.9vw;
+                    background-color: #0F51C9;
+                }
+
+                .amap-container .PlantingAreaSearchList .main .center .SearchItem .bottom-left-corner {
+                    width: 0.3vw;
+                    height: 0.5vh;
+                    position: absolute;
+                    top: 2.6vh;
+                    left: -0.2vw;
+                    background-color: #0F51C9;
+                }
+
+                .amap-container .PlantingAreaSearchList .main .center .SearchItem .bottom-right-corner {
+                    width: 0.3vw;
+                    height: 0.5vh;
+                    position: absolute;
+                    top: 2.6vh;
+                    left: 8.9vw;
+                    background-color: #0F51C9;
+                }
+
+                .amap-container .PlantingAreaSearchList .main .center .SearchItem .center-container {
+                    width: 100%;
+                    height: 3.5vh;
+                    line-height: 2.7vh;
+                    font-family: 'Microsoft YaHei UI';
+                    font-size: 0.8vw;
+                    color: #ffffff;
+                    font-weight: 700;
+                    text-align: center;
+                    border: 0px solid red;
+                    /*margin-top: 0.4vh;*/
+                    margin-top: 0vh;
+                    float: left;
+                }
+
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.amap-container .PlantingAreaSearchList .main .center .SearchItem:hover {
+    color: #ebe120;
+}
+
+.amap-container .PlantingAreaSearchList .main .center .SearchClickItem {
+    width: 46%;
+    height: 3vh;
+    line-height: 3vh;
+    margin-top: 5.5%;
+    margin-left: 2.3%;
+    font-family: "Microsoft YaHei UI";
+    font-size: 0.8vw;
+    color: #21fdde;
+    cursor: pointer;
+    text-align: center;
+    background-color: #00d2ff66;
+    position: relative;
+    float:left;
+    /*box-shadow: 6px 6px 8px 3px #d537b357 inset, 6px -5px 5px 3px #cf36a057 inset, -6px -5px 5px 3px #377dd557 inset;*/
+    /*box-shadow: 6px 6px 8px 3px #00d2ff66 inset, 6px -5px 5px 3px #4bdfe557 inset, -6px -5px 5px 3px #4bdfe557 inset;*/
+    /*border-radius: 10px;*/
+    /*border: 1px solid #21fdde;*/
+    border: 1px solid #0F51C9;
+    background-color: #0b5dbdb5;
+}
+
+    .amap-container .PlantingAreaSearchList .main .center .SearchClickItem .top-left-corner {
+        width: 0.3vw;
+        height: 0.5vh;
+        position: absolute;
+        top: -0.3vh;
+        left: -0.2vw;
+        background-color: #0F51C9;
+    }
+
+    .amap-container .PlantingAreaSearchList .main .center .SearchClickItem .top-right-corner {
+        width: 0.3vw;
+        height: 0.5vh;
+        position: absolute;
+        top: -0.3vh;
+        left: 8.9vw;
+        background-color: #0F51C9;
+    }
+
+    .amap-container .PlantingAreaSearchList .main .center .SearchClickItem .bottom-left-corner {
+        width: 0.3vw;
+        height: 0.5vh;
+        position: absolute;
+        top: 2.6vh;
+        left: -0.2vw;
+        background-color: #0F51C9;
+    }
+
+    .amap-container .PlantingAreaSearchList .main .center .SearchClickItem .bottom-right-corner {
+        width: 0.3vw;
+        height: 0.5vh;
+        position: absolute;
+        top: 2.6vh;
+        left: 8.9vw;
+        background-color: #0F51C9;
+    }
+
+.amap-container .yearSelectedList {
+    position: absolute;
+    top: 71vh;
+    left: 31vw;
+    min-width: 23vw;
+    width: auto !important;
+    height: 7vh;
+    float: left;
+    border: 1px solid #357CB2;
+    z-index: 2050;
+    border-radius: 10px;
+    background-color: #076be7c9;
+}
+
+    .amap-container .yearSelectedList .yearItem-Container {
+        width: 9vw;
+        height: 7vh;
+        border: 0px solid red;
+        float: left;
+    }
+
+        .amap-container .yearSelectedList .yearItem-Container .yearItemNormal {
+            width: 5vw;
+            height: 5vh;
+            line-height: 5vh;
+            margin-top: 1vh;
+            margin-left: 1.5vw;
+            margin-right: 1.2vw;
+            font-family: "Microsoft YaHei UI";
+            font-size: 0.9vw;
+            color: #fcf7f7;
+            font-weight: 700;
+            text-align: center;
+            cursor: pointer;
+            /*background-color: #09284c52;*/
+            /*box-shadow: 6px 6px 8px 3px #377dd557 inset, 6px -5px 5px 3px #377dd557 inset, -6px -5px 5px 3px #377dd557 inset;*/
+            /*border-radius: 10px;*/
+            float: left;
+        }
+
+        .amap-container .yearSelectedList .yearItem-Container .split-line {
+            width: 0.1vw;
+            height: 6vh;
+            margin-top: 0.6%;
+            margin-left: 11%;
+            background: linear-gradient(#17193c1a,#18dae7,#ffffff05);
+            float: left;
+        }
+
+        .amap-container .yearSelectedList .yearItem-Container .yearItemNormal:hover {
+            color: #5FF9FF;
+        }
+
+        .amap-container .yearSelectedList .yearItem-Container .yearItemClick {
+            width: 5vw;
+            height: 5vh;
+            line-height: 5vh;
+            margin-top: 1vh;
+            margin-left: 1.5vw;
+            margin-right: 1.2vw;
+            font-family: "Microsoft YaHei UI";
+            font-size: 0.9vw;
+            color: #fcf7f7;
+            text-align: center;
+            cursor: pointer;
+            background-color: #1d6ac3c2;
+            box-shadow: 6px 6px 8px 3px #37d5ceb5 inset, 6px -5px 5px 3px #37d5bfa8 inset, -6px -5px 5px 3px #37d5cea6 inset;
+            border-radius: 10px;
+            border: 1px solid #357CB2;
+            float: left;
+        }
+
+.amap-container .RankingList {
+    position: absolute;
+    top: 28vh;
+    left: 76vw;
+    width: 22vw;
+    height: 55vh;
+    z-index: 2067;
+    /* background-color: rgba(18, 77, 197, 0.447058823529412);*/
+    border: 0px solid rgba(121, 121, 121, 1);
+    /*border-radius: 15px;*/
+}
+
+    .amap-container .RankingList .title {
+        width: 99%;
+        height: 6vh;
+        line-height: 6vh;
+        font-family: "Microsoft YaHei UI";
+        font-size: 1vw;
+        color: #ffffff;
+        text-align: center;
+        margin-left: auto;
+        margin-top: 1%;
+        background-image: url(/images/newhome/border_top.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 99% 99%;
+        float: left;
+    }
+
+        .amap-container .RankingList .title .title-text {
+            width: 78%;
+            height: 76%;
+            line-height: 279%;
+            margin-top: 2%;
+            margin-left: 7%;
+            border: 0px solid red;
+            font-family: 'Microsoft YaHei';
+            font-size: 2vh;
+            font-weight: 700;
+            text-align: left;
+            color: #DDEAFE;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+    .amap-container .RankingList .main {
+        width: 99%;
+        height: 45vh;
+        font-family: "Microsoft YaHei UI";
+        font-size: 1.2vw;
+        color: #ffffff;
+        text-align: center;
+        margin-left: auto;
+        margin-top: 0%;
+        overflow: hidden;
+        background-image: url(/images/newhome/border_middle.png);
+        background-repeat: repeat-y;
+        background-position: center center;
+        background-size: 99% 99%;
+        float: left;
+    }
+
+        .amap-container .RankingList .main .center {
+            width: 91%;
+            height: 56vh;
+            margin-left: 4.2%;
+            margin-top: 2.3%;
+            overflow: hidden;
+            border: 0px solid red;
+            float: left;
+        }
+
+    .amap-container .RankingList .bottom-container {
+        width: 99%;
+        height: 2vh;
+        float: left;
+        margin: -0.2% auto;
+        border: 0px;
+        background-image: url(/images/newhome/border_bottom.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 99% 99%;
+    }
+
+    .amap-container .RankingList .main .emptyData {
+        width: 98%;
+        height: 36vh;
+        line-height: 36vh;
+        font-family: "Microsoft YaHei UI";
+        font-size: 1.2vw;
+        color: #ffffff;
+        text-align: center;
+        margin-left: 1%;
+        margin-top: 3%;
+        overflow: hidden;
+        border: 0px solid red;
+        float: left;
+    }
+
+    .amap-container .RankingList .main .center .scrolDiv {
+        width: 98%;
+        min-height: 36vh;
+        height: auto !important;
+        font-family: "Microsoft YaHei UI";
+        font-size: 0.5vw;
+        color: #ffffff;
+        text-align: center;
+        margin-left: 1%;
+        margin-top: 3%;
+        border: 0px solid red;
+        float: left;
+    }
+
+        .amap-container .RankingList .main .center .scrolDiv .RankItem-Container {
+            width: 96%;
+            height: 3vh;
+            /*margin-left: 2%;*/
+            margin-top: 1%;
+            border: 0px solid red;
+        }
+
+            .amap-container .RankingList .main .center .scrolDiv .RankItem-Container:hover {
+                cursor: pointer;
+                /*border-radius: 10px;*/
+                /*border-bottom: 1px solid #16dce9;*/
+            }
+
+            .amap-container .RankingList .main .center .scrolDiv .RankItem-Container .progress-container {
+                width: 64%;
+                height: 1.6vh;
+                /*margin: 1% auto;*/
+                margin-top: 1.3%;
+                margin-left: 1%;
+                border: 0px solid red;
+                float: left;
+            }
+
+            .amap-container .RankingList .main .center .scrolDiv .RankItem-Container .landname {
+                width: 16%;
+                height: 2vh;
+                margin-top: 1%;
+                margin-left: 3.5%;
+                text-align: left;
+                /*text-indent: 6%;*/
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                float: left;
+                border: 0px solid red;
+            }
+
+            .amap-container .RankingList .main .center .scrolDiv .RankItem-Container .value {
+                width: 10%;
+                height: 2vh;
+                margin-top: 1%;
+                margin-left: 5%;
+                text-align: left;
+                text-indent: 6%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                float: left;
+                border: 0px solid red;
+            }
+
+            .amap-container .RankingList .main .center .scrolDiv .RankItem-Container .progress-container .el-progress {
+                margin-top: 1%;
+            }
+
+            .amap-container .RankingList .main .center .scrolDiv .RankItem-Container .progress-container .el-progress-bar .el-progress-bar__outer {
+                background-color: #3a2c2c87;
+            }
+
+            .amap-container .RankingList .main .center .scrolDiv .RankItem-Container .progress-container .el-progress-bar .el-progress-bar__inner {
+                background: linear-gradient(88deg, #00FFFF, #17F8E8);
+            }
+
+            .amap-container .RankingList .main .center .scrolDiv .RankItem-Container .text-container {
+                width: 98%;
+                height: 2.6vh;
+                line-height: 2.6vh;
+                font-family: "Microsoft YaHei UI";
+                font-size: 0.8vw;
+                color: #ffffff;
+                margin: 1% auto;
+                border: 0px solid red;
+            }
+
+                .amap-container .RankingList .main .center .scrolDiv .RankItem-Container .text-container .landname {
+                    width: 50%;
+                    height: 2.5vh;
+                    margin-top: 0.2%;
+                    text-align: left;
+                    text-indent: 2%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    float: left;
+                    border: 0px solid red;
+                }
+
+                .amap-container .RankingList .main .center .scrolDiv .RankItem-Container .text-container .value {
+                    width: 50%;
+                    height: 2.5vh;
+                    margin-top: 0.2%;
+                    text-align: left;
+                    text-indent: 47%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    float: left;
+                    border: 0px solid red;
+                }
+
+.amap-container .MonitorContainer {
+    position: absolute;
+    top: 28.3vh;
+    left: 1vw;
+    width: 22vw;
+    height: 55vh;
+    z-index: 3000;
+    /* background-color: rgba(18, 77, 197, 0.447058823529412);*/
+    border: 0px solid rgba(121, 121, 121, 1);
+    /*border-radius: 15px;*/
+}
+
+    .amap-container .MonitorContainer .title {
+        position:relative;
+        width: 99%;
+        height: 6vh;
+        line-height: 6vh;
+        font-family: "Microsoft YaHei UI";
+        font-size: 1vw;
+        color: #ffffff;
+        text-align: center;
+        margin-left: auto;
+        margin-top: 1%;
+        background-image: url(/images/newhome/border_top.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 99% 99%;
+        float: left;
+    }
+
+        .amap-container .MonitorContainer .title .title-text {
+            width: 78%;
+            height: 76%;
+            line-height: 279%;
+            margin-top: 2%;
+            margin-left: 7%;
+            border: 0px solid red;
+            font-family: 'Microsoft YaHei';
+            font-size: 2vh;
+            font-weight: 700;
+            text-align: left;
+            color: #DDEAFE;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .amap-container .MonitorContainer .addIcon {
+            position: absolute;
+            top: 4.5vh;
+            left: 13.5vw;
+            width: 1.6vw;
+            height: 3vh;
+            z-index: 320;
+            cursor:pointer;
+            /*border: 1px solid red;*/
+        }
+
+        .amap-container .MonitorContainer .editIcon {
+            position: absolute;
+            top: 4.5vh;
+            left: 16vw;
+            width: 1.6vw;
+            height: 3vh;
+            z-index: 320;
+            cursor: pointer;
+            /*border: 1px solid red;*/
+        }
+
+    .amap-container .MonitorContainer .deleteIcon {
+        position: absolute;
+        top: 4.5vh;
+        left: 18vw;
+        width: 1.6vw;
+        height: 3vh;
+        z-index: 320;
+        cursor: pointer;
+        /*border: 1px solid red;*/
+    }
+
+    .amap-container .MonitorContainer .main {
+        width: 99%;
+        height: 45vh;
+        font-family: "Microsoft YaHei UI";
+        font-size: 1.2vw;
+        color: #ffffff;
+        text-align: center;
+        margin-left: auto;
+        margin-top: 0%;
+        overflow: hidden;
+        background-image: url(/images/newhome/border_middle.png);
+        background-repeat: repeat-y;
+        background-position: center center;
+        background-size: 99% 99%;
+        float: left;
+    }
+
+        .amap-container .MonitorContainer .main .video-container {
+            width: 86%;
+            height: 30vh;
+            margin-top: 2%;
+            margin-left: 7%;
+            border: 0px solid red;
+            float: left;
+        }
+
+        .amap-container .MonitorContainer .main .vip-container {
+            width: 86%;
+            height: 26vh;
+            margin-top: 2%;
+            margin-left: 7%;
+            border: 0px solid red;
+            float: left;
+        }
+
+            .amap-container .MonitorContainer .main .vip-container .line-container {
+                width:96%;
+                height:4.3vh;
+                line-height:4.3vh;
+                font-family:"Microsoft YaHei UI";
+                font-size:1vh;
+                color:#ffffff;
+                font-weight:700;
+                margin-left:2%;
+                margin-top:2%;
+                border:0px solid red;
+                float:left;
+            }
+
+                .amap-container .MonitorContainer .main .vip-container .line-container .label {
+                    width: 35%;
+                    height: 4.3vh;
+                    font-size: 2vh;
+                    color: #00dcff; 
+                    border: 0px solid red;
+                    float: left;
+                }
+
+                .amap-container .MonitorContainer .main .vip-container .line-container .value {
+                    width: 65%;
+                    height: 4.3vh;
+                    font-size: 2vh;
+                    border: 0px solid red;
+                    float: left;
+                }
+
+                .amap-container .MonitorContainer .main .video-list-container {
+                    width: 86%;
+                    height: 17vh;
+                    margin-top: 2%;
+                    margin-left: 7%;
+                    overflow-x:hidden;
+                    overflow-y:auto;
+                    border: 0px solid red;
+                    float: left;
+                }
+
+            .amap-container .MonitorContainer .main .video-list-container .video-item-normal {
+                width: 99%;
+                height: 3vh;
+                position: relative;
+                margin-left: 0.2%;
+                margin-top: 6%;
+                cursor: pointer;
+                float: left;
+                border: 1px solid #0F51C9;
+                background-color: #00377791;
+            }
+
+                .amap-container .MonitorContainer .main .video-list-container .video-item-normal .top-left-corner {
+                    width: 0.3vw;
+                    height: 0.5vh;
+                    position: absolute;
+                    top: -0.3vh;
+                    left: -0.2vw;
+                    background-color: #0F51C9;
+                }
+
+                .amap-container .MonitorContainer .main .video-list-container .video-item-normal .top-right-corner {
+                    width: 0.3vw;
+                    height: 0.5vh;
+                    position: absolute;
+                    top: -0.3vh;
+                    left: 18.3vw;
+                    background-color: #0F51C9;
+                }
+
+                .amap-container .MonitorContainer .main .video-list-container .video-item-normal .bottom-left-corner {
+                    width: 0.3vw;
+                    height: 0.5vh;
+                    position: absolute;
+                    top: 2.6vh;
+                    left: -0.2vw;
+                    background-color: #0F51C9;
+                }
+
+                .amap-container .MonitorContainer .main .video-list-container .video-item-normal .bottom-right-corner {
+                    width: 0.3vw;
+                    height: 0.5vh;
+                    position: absolute;
+                    top: 2.6vh;
+                    left: 18.3vw;
+                    background-color: #0F51C9;
+                }
+
+                .amap-container .MonitorContainer .main .video-list-container .video-item-normal .center-container {
+                    width: 100%;
+                    height: 3vh;
+                    line-height: 2.7vh;
+                    font-family: 'Microsoft YaHei UI';
+                    font-size: 0.8vw;
+                    color: #ffffff;
+                    font-weight: 700;
+                    text-align: center;
+                    border: 0px solid red;
+                    /* margin-top: 0.4vh; */
+                    margin-top: 0vh;
+                    float: left;
+                }
+
+                    .amap-container .MonitorContainer .main .video-list-container .video-item-normal .center-container .MonitorName {
+                        width: 90%;
+                        height: 3vh;
+                        text-align: left;
+                        text-indent: 3%;
+                        border: 0px solid red;
+                        float: left;
+                    }
+
+                    .amap-container .MonitorContainer .main .video-list-container .video-item-normal .center-container .Arrow {
+                        width: 10%;
+                        height: 3vh;
+                        text-align: center;
+                        border: 0px solid red;
+                        float: left;
+                    }
+
+            .amap-container .MonitorContainer .main .video-list-container .video-click-normal {
+                width: 99%;
+                height: 3vh;
+                position: relative;
+                margin-left: 0.2%;
+                margin-top: 6%;
+                cursor: pointer;
+                float: left;
+                border: 1px solid #0F51C9;
+                background-color: #0b5dbdb5;
+            }
+
+                .amap-container .MonitorContainer .main .video-list-container .video-click-normal .top-left-corner {
+                    width: 0.3vw;
+                    height: 0.5vh;
+                    position: absolute;
+                    top: -0.3vh;
+                    left: -0.2vw;
+                    background-color: #0F51C9;
+                }
+
+                .amap-container .MonitorContainer .main .video-list-container .video-click-normal .top-right-corner {
+                    width: 0.3vw;
+                    height: 0.5vh;
+                    position: absolute;
+                    top: -0.3vh;
+                    left: 18.3vw;
+                    background-color: #0F51C9;
+                }
+
+                .amap-container .MonitorContainer .main .video-list-container .video-click-normal .bottom-left-corner {
+                    width: 0.3vw;
+                    height: 0.5vh;
+                    position: absolute;
+                    top: 2.6vh;
+                    left: -0.2vw;
+                    background-color: #0F51C9;
+                }
+
+                .amap-container .MonitorContainer .main .video-list-container .video-click-normal .bottom-right-corner {
+                    width: 0.3vw;
+                    height: 0.5vh;
+                    position: absolute;
+                    top: 2.6vh;
+                    left: 18.3vw;
+                    background-color: #0F51C9;
+                }
+
+                .amap-container .MonitorContainer .main .video-list-container .video-click-normal .center-container {
+                    width: 100%;
+                    height: 3vh;
+                    line-height: 2.7vh;
+                    font-family: 'Microsoft YaHei UI';
+                    font-size: 0.8vw;
+                    color: #ffffff;
+                    font-weight: 700;
+                    text-align: center;
+                    border: 0px solid red;
+                    /* margin-top: 0.4vh; */
+                    margin-top: 0vh;
+                    float: left;
+                }
+
+                    .amap-container .MonitorContainer .main .video-list-container .video-click-normal .center-container .MonitorName {
+                        width: 90%;
+                        height: 3vh;
+                        text-align: left;
+                        text-indent: 3%;
+                        border: 0px solid red;
+                        float: left;
+                    }
+
+                    .amap-container .MonitorContainer .main .video-list-container .video-click-normal .center-container .Arrow {
+                        width: 10%;
+                        height: 3vh;
+                        text-align: center;
+                        border: 0px solid red;
+                        float: left;
+                    }
+
+    .amap-container .MonitorContainer .bottom-container {
+        width: 99%;
+        height: 2vh;
+        float: left;
+        margin: -0.2% auto;
+        border: 0px;
+        background-image: url(/images/newhome/border_bottom.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 99% 99%;
+    }
+
+#myPlayer1 {
+    object-fit: fill;
+    width: 100%;
+    height: 95%;
+    margin-left: 0%;
+    margin-top: 3%;
+    border-radius: 5px;
+}

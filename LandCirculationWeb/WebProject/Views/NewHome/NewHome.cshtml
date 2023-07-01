@@ -1,0 +1,1122 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Head {
+    <script type="text/javascript" src="~/js/video.js"></script>
+    <script type="text/javascript" src="~/js/videojs-contrib-hls.js"></script>
+    <link href="~/css/NewHomeExtend.css" rel="stylesheet" />
+    <link href="~/css/video-js.css" rel="stylesheet" /> 
+    <link href="~/css/addVipDialog.css" rel="stylesheet" />
+}
+@section Body {
+    <div id="AMapContainer" class="amap-container">
+        <div class="amap-container-center">
+        </div>
+        <div @@click="showLandList" class="control-container">
+            <img class="btnEdit" @@click="gotoEditPage" src="/images/newhome/01_18.png" />
+            <div class="land-selected">
+                {{currentLandName}}&nbsp;&or;
+            </div>
+        </div>
+        <div class="land-dropdownlist">
+            <div class="center">
+                <div v-for="(item,index) in landList" :key="index" @@click="landClick(item)" class="land-item">
+                    {{item}}
+                </div>
+            </div>
+        </div>
+        <div class="PlantingStatistics">
+            <div class="title">
+                <div class="title-text">
+                    种植面积统计
+                </div>
+            </div>
+            <div class="chartStatistics">
+                <div id="PlantingStatisticsChart" class="center"></div>
+            </div>
+            <div class="bottom-container"></div>
+        </div>
+        <div class="MonitorContainer">
+            <img src="~/images/addIcon42x42.png" style="display:none" title="添加种粮大户信息" class="addIcon" />
+            <img src="~/images/editIcon50x50.png" style="display:none" title="编辑种粮大户信息" class="editIcon" />
+            <img src="~/images/deleteIcon50x60.png" style="display:none" title="删除种粮大户信息" class="deleteIcon" />
+            <div class="title">
+                <div class="title-text">
+                    大户散户信息
+                </div>
+            </div>
+            <div class="main">
+                @*<div class="video-container">
+                    <video id="myPlayer1" style="width:100%;height:100%;object-fit:fill" controls="controls" preload="auto" autoplay="autoplay" class="video-js vjs-default-skin" poster="" playsInline webkit-playsinline controls autoplay muted>
+                        <source :src="videoUrl" type="application/x-mpegURL" />
+                    </video>
+                </div>*@
+                <div class="vip-container">
+                    <div class="line-container">
+                        <div class="label">
+                            村&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名
+                        </div>
+                        <div class="value">
+                            {{currentVipInfo.village}}
+                        </div>
+                    </div>
+                    <div class="line-container">
+                        <div class="label">
+                            姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名
+                        </div>
+                        <div class="value">
+                            {{currentVipInfo.name}}
+                        </div>
+                    </div>
+                    <div class="line-container">
+                        <div class="label">
+                            流转面积
+                        </div>
+                        <div class="value">
+                            {{currentVipInfo.plantingAreaTotal}}亩
+                        </div>
+                    </div>
+                    <div class="line-container">
+                        <div class="label">
+                            流转价格
+                        </div>
+                        <div class="value">
+                            {{currentVipInfo.plantingAreaPrice}}
+                        </div>
+                    </div>
+                    <div class="line-container">
+                        <div class="label">
+                            地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邻
+                        </div>
+                        <div class="value">
+                            {{currentVipInfo.neighBorhood}}
+                        </div>
+                    </div>
+                </div>
+                <div class="video-list-container">
+                    @*<div @@click="changeMonitor(0)" :class="currentMonitorIndex==0?'video-click-normal':'video-item-normal'" >
+                        <!--四个角亮点-->
+                        <div class="top-left-corner"></div>
+                        <div class="bottom-left-corner"></div>
+                        <div class="top-right-corner"></div>
+                        <div class="bottom-right-corner"></div>
+                        <!--/四个角亮点-->
+                        <div class="center-container">
+                            <div class="MonitorName">
+                                视频监控1
+                            </div>
+                            <div class="Arrow">
+                                &gt;
+                            </div>
+                        </div>
+                    </div>
+                    <div @@click="changeMonitor(1)" :class="currentMonitorIndex==1?'video-click-normal':'video-item-normal'" >
+                        <!--四个角亮点-->
+                        <div class="top-left-corner"></div>
+                        <div class="bottom-left-corner"></div>
+                        <div class="top-right-corner"></div>
+                        <div class="bottom-right-corner"></div>
+                        <!--/四个角亮点-->
+                        <div class="center-container">
+                            <div class="MonitorName">
+                                视频监控2
+                            </div>
+                            <div class="Arrow">
+                                &gt;
+                            </div>
+                        </div>
+                    </div>*@
+                    <div v-for="(item,index) in vipInfos" @@click="changeVipInfo(index)" :class="currentMonitorIndex==index?'video-click-normal':'video-item-normal'" >
+                        <!--四个角亮点-->
+                        <div class="top-left-corner"></div>
+                        <div class="bottom-left-corner"></div>
+                        <div class="top-right-corner"></div>
+                        <div class="bottom-right-corner"></div>
+                        <!--/四个角亮点-->
+                        <div class="center-container">
+                            <div class="MonitorName">
+                                {{item.name}}
+                            </div>
+                            <div class="Arrow">
+                                &gt;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-container"></div>
+        </div>
+        <div class="PlantingAreaSearchList">
+            <div class="title">
+                <div class="title-text">
+                    种植面积筛选
+                </div>
+            </div>
+            <div class="main">
+                <div class="center">
+                    <div @@click="changeSearchIndex(0,100)" :class="currentSearchIndex==0?'SearchClickItem':'SearchItem'" >
+                        <!--四个角亮点-->
+                        <div class="top-left-corner"></div>
+                        <div class="bottom-left-corner"></div>
+                        <div class="top-right-corner"></div>
+                        <div class="bottom-right-corner"></div>
+                        <!--/四个角亮点-->
+                        <div class="center-container">
+                             少于100亩
+                        </div>                  
+                    </div>
+                    <div @@click="changeSearchIndex(1,200)" :class="currentSearchIndex==1?'SearchClickItem':'SearchItem'" >
+                        <!--四个角亮点-->
+                        <div class="top-left-corner"></div>
+                        <div class="bottom-left-corner"></div>
+                        <div class="top-right-corner"></div>
+                        <div class="bottom-right-corner"></div>
+                        <!--/四个角亮点-->
+                        <div class="center-container">
+                             100亩~200亩
+                        </div>                  
+                    </div>
+                    <div @@click="changeSearchIndex(2,300)" :class="currentSearchIndex==2?'SearchClickItem':'SearchItem'" >
+                        <!--四个角亮点-->
+                        <div class="top-left-corner"></div>
+                        <div class="bottom-left-corner"></div>
+                        <div class="top-right-corner"></div>
+                        <div class="bottom-right-corner"></div>
+                        <!--/四个角亮点-->
+                        <div class="center-container">
+                             200亩~300亩
+                        </div>  
+                    </div>
+                    <div @@click="changeSearchIndex(3,400)" :class="currentSearchIndex==3?'SearchClickItem':'SearchItem'" >
+                        <!--四个角亮点-->
+                        <div class="top-left-corner"></div>
+                        <div class="bottom-left-corner"></div>
+                        <div class="top-right-corner"></div>
+                        <div class="bottom-right-corner"></div>
+                        <!--/四个角亮点-->
+                        <div class="center-container">
+                             300亩~400亩
+                        </div>  
+                    </div>
+                    <div @@click="changeSearchIndex(4,500)" :class="currentSearchIndex==4?'SearchClickItem':'SearchItem'" >
+                        <!--四个角亮点-->
+                        <div class="top-left-corner"></div>
+                        <div class="bottom-left-corner"></div>
+                        <div class="top-right-corner"></div>
+                        <div class="bottom-right-corner"></div>
+                        <!--/四个角亮点-->
+                        <div class="center-container">
+                             400亩~500亩
+                        </div>  
+                    </div>
+                    <div @@click="changeSearchIndex(5,600)" :class="currentSearchIndex==5?'SearchClickItem':'SearchItem'" >
+                        <!--四个角亮点-->
+                        <div class="top-left-corner"></div>
+                        <div class="bottom-left-corner"></div>
+                        <div class="top-right-corner"></div>
+                        <div class="bottom-right-corner"></div>
+                        <!--/四个角亮点-->
+                        <div class="center-container">
+                             大于500亩
+                        </div>                  
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-container"></div>
+        </div>
+        <div class="RankingList">
+            <div class="title">
+                <div class="title-text">
+                    {{currentLandName}}统计列表(亩)
+                </div>
+            </div>
+            <div class="main">
+                <div id="RankingListMain" class="center">
+                    <div v-show="isRankShow" id="RankingListScrollDiv" class="scrolDiv">
+                        <!--ITEM-->
+                        <div v-for="(item,index) in landStatisticsList" :key="index" class="RankItem-Container" :title="(index+1)+' '+item.village+' '+item.plantingAreaStatistics">
+                            <div class="landname">
+                                {{index+1}}&nbsp;{{item.village}}
+                            </div>
+                            <div class="progress-container">
+                                <el-progress type="line" :show-text="false" :color="'#409eff'" :percentage="parseFloat(item.plantAreaPercentage)" :stroke-width="9"></el-progress>
+                            </div>
+                            <div class="value">
+                                {{item.plantingAreaStatistics}}
+                            </div>
+                        </div>
+                        <!--/ITEM-->
+                    </div>
+                </div>
+                <div v-show="isRankEmpty" id="RankingListEmptylDiv" class="emptyData">
+                    无数据
+                </div>
+            </div>
+            <div class="bottom-container"></div>
+        </div>
+        <div class="yearSelectedList">
+            @*<div class="yearItem-Container">
+                <div @@click="changeYear(-1)" :class="currentYear==-1?'yearItemClick':'yearItemNormal'">
+                    视频监控
+                </div>
+                <div class="split-line"></div>
+            </div>*@
+            <div class="yearItem-Container" v-for="(item,index) in yearList" :key="index">
+                <div @@click="changeYear(item)" :class="currentYear==item?'yearItemClick':'yearItemNormal'">
+                    {{item}}
+                </div>
+                <div v-show="index!=yearList.length-1" class="split-line"></div>
+            </div>
+        </div>
+    </div>
+}
+@section Dialog {
+    <el-dialog :visible.sync="addVipDialog" custom-class="addVipDialog" title="添加种粮大户信息">
+        <div class="dialogPanel">
+            <div class="line-container">
+                <div class="label-must">
+                    编&nbsp;号
+                </div>
+                <div class="input-container">
+                    <el-input class="el-input-custom" :readonly="false" placeholder="请输入编号" ></el-input>
+                </div>
+            </div>
+            <div class="line-container">
+                <div class="label-must">
+                    村&nbsp;名
+                </div>
+                <div class="input-container">
+                    <el-input class="el-input-custom" :readonly="false" placeholder="请输入村名" ></el-input>
+                </div>
+            </div>
+            <div class="line-container">
+                <div class="label-must">
+                    姓&nbsp;名
+                </div>
+                <div class="input-container">
+                    <el-input class="el-input-custom" :readonly="false" placeholder="请输入姓名" ></el-input>
+                </div>
+            </div>
+            <div class="line-container">
+                <div class="label">
+                    流转面积
+                </div>
+                <div class="input-container">
+                    <el-input class="el-input-custom" :readonly="false" placeholder="请输入流转面积" ></el-input>
+                </div>
+            </div>
+            <div class="line-container">
+                <div class="label">
+                    流转价格
+                </div>
+                <div class="input-container">
+                    <el-input class="el-input-custom" :readonly="false" placeholder="请输入流转面积" ></el-input>
+                </div>
+            </div>
+            <div class="line-container">
+                <div class="label">
+                    地&nbsp;邻
+                </div>
+                <div class="input-container">
+                    <el-select class="el-input-custom" placeholder="请选择地邻" >
+
+                    </el-select>
+                </div>
+            </div>
+        </div>
+    </el-dialog>
+}
+@{
+    var regionId = (string)ViewData["regionId"];
+    regionId = System.Web.HttpUtility.HtmlDecode(regionId);
+}
+@section VueScript {
+<script>
+    var v_rootDistrictId = "@regionId";
+    var rootDistrictId = 3135;
+    var globalRegions = [];
+    var globalAllRegions = [];
+    var app = new Vue({
+        el: "#app",
+        data: {
+            amap:null,
+            userName:"",
+            timestr: "",
+            datestr: "",
+            userInfo:{
+                Account:'',
+                CompanyId:'',
+                Level:''
+            },
+            neighborhoodOptions:[
+                {
+                    value:'散户',
+                    label:'散户'
+                },
+                {
+                    value:'大户',
+                    label:'大户'
+                }
+            ],
+            addVipDialog:false,
+            globalLandList:[],
+            currentLandName:'德平镇',
+            oldYear:0,
+            currentYear:0,
+            currentPlantArea:0,
+            yearList:[],
+            oldSearchIndex:-1,
+            currentSearchIndex:-1,
+            landList:[],
+            landStatisticsList:[],
+            landAllStatisticsList:[],
+            scrollRankListTime:null,
+            isRankEmpty:false,
+            isRankShow:true,
+            Top:12,
+            menuModels:[
+                {
+                    name:'土地流转',
+                        uri: 'http://localhost:17726'
+                },
+                {
+                    name:'农田监测',
+                    uri:'#'
+                },
+                {
+                    name:'智慧农机',
+                    uri:'#'
+                },
+                {
+                    name:'农业专家',
+                    uri:'#'
+                },
+                {
+                    name:'深思大脑',
+                    uri:'#'
+                }
+            ],
+            hideMenus:[],
+            monitorList:[
+                {
+                    //url:'https://hd-auth.skylinewebcams.com/live.m3u8?a=ghl3h9c88kmtv19ieuvcfguu00',
+                    url:'http://daxun.tpddns.cn:81/live/ch377_1_1.m3u8',
+                    name:'视频监控1',
+                    center:[116.97511209503172,37.50010630432063]
+                },
+                {
+                    url:'http://80.73.96.50/webcam06/playlist.m3u8',
+                    name:'视频监控2',
+                    center:[116.9671298410034,37.43673502867489]
+                }
+            ],
+            currentVipInfo:{
+                id:0,
+                village:'',
+                name:'',
+                plantingAreaTotal:0,
+                plantingAreaPrice:0,
+                neighBorhood:''
+            },
+            vipInfos:[
+                {
+                    id:0,
+                    village:'郭湾村/魏家村',
+                    name:'郭仁华',
+                    plantingAreaTotal:1140,
+                    plantingAreaPrice:1200,
+                    neighBorhood:'散户',
+                    massifList:[
+                        {
+                            //1
+                            plantingArea:'220亩',
+                            center:[116.95929439950561,37.49890089713609],
+                            LongLat:[[116.95698564,37.50116834],[116.96009651,37.50119209],[116.96061282,37.49760041],[116.96056970,37.49699581],[116.95924561,37.49689924],[116.95740493,37.49679310]]
+                        },
+                        {
+                            //2
+                            plantingArea:'180亩',
+                            center:[116.95420893121337,37.50232259578703],
+                            LongLat:[[116.95259487,37.50382413],[116.95279904,37.50117686],[116.95771758,37.50125503],[116.95745952,37.50364675]]
+                        },
+                        {
+                            //3   
+                            plantingArea:'125亩',
+                            center:[116.95618303704833,37.49605787402443],
+                            LongLat:[[116.95902492,37.49676679],[116.95501010,37.49648587],[116.95512297,37.49521322],[116.95619925,37.49520692],[116.95639285,37.49402382],[116.95870170,37.49424585],[116.95917009,37.49544314]]
+                        },
+                        {
+                            //4
+                            plantingArea:'90亩',
+                            center:[116.95075424600219,37.502867329361855],
+                            LongLat:[[116.95250878,37.50381545],[116.95081934,37.50389735],[116.95007151,37.50394703],[116.94990461,37.50292513],[116.94979689,37.50183947],[116.95165305,37.50176208],[116.95183591,37.50116648],[116.95272371,37.50118522]]
+                        },
+                        {
+                            //5
+                            plantingArea:'145亩',
+                            center:[116.96199806619262,37.50542071501873],
+                            LongLat:[[116.96030124,37.50295483],[116.96143161,37.50306803],[116.96147471,37.50337461],[116.96264819,37.50341985],[116.96267514,37.50373065],[116.96289584,37.50373541],[116.96382714,37.50379291],[116.96387578,37.50545309],[116.96339668,37.50554561],[116.96334830,37.50613290],[116.96149656,37.50626487],[116.96146428,37.50636269],[116.96040928,37.50637310],[116.96037691,37.50576009],[116.96042529,37.50518131],[116.96012386,37.50513382]]
+                        },
+                        {
+                            //6
+                            plantingArea:'150亩',
+                            center:[116.96294596029662,37.50789926598599],
+                            LongLat:[[116.96148044,37.50648191],[116.96341292,37.50635439],[116.96359065,37.50705711],[116.96395138,37.50751339],[116.96424208,37.50748428],[116.96422591,37.50735229],[116.96679390,37.50727329],[116.96729477,37.50868336],[116.96513048,37.50868241],[116.96426913,37.50868889],[116.96425835,37.50859097],[116.96415607,37.50858222],[116.96272413,37.50860443],[116.96162601,37.50859341],[116.96018346,37.50858167],[116.96010800,37.50764084],[116.96156131,37.50765261]]
+                        },
+                        {
+                            //7
+                            plantingArea:'110亩',
+                            center:[116.96319969583129,37.5095229717605],
+                            LongLat:[[116.96022127,37.50971818],[116.96016194,37.50863269],[116.96416145,37.50863756],[116.96422607,37.50876114],[116.96528662,37.50877642],[116.96565825,37.51019039],[116.96024283,37.51000340]]
+                        },
+                        {
+                            //8
+                            plantingArea:'120亩',
+                            center:[116.96702291799926,37.51123544752621],
+                            LongLat:[[116.96422623,37.51020828],[116.96588437,37.51026754],[116.96546966,37.50877260],[116.96718172,37.50878524],[116.96786028,37.51033192],[116.96831266,37.51132473],[116.96804889,37.51182205],[116.96799510,37.51221348],[116.96766667,37.51221693],[116.96766134,37.51272764],[116.96705295,37.51274318],[116.96694515,37.51172997],[116.96423708,37.51094037]]
+                        }
+                    ]
+                },
+                {
+                    id:1,
+                    village:'纪张圣村',
+                    name:'郭宗恒',
+                    plantingAreaTotal:100,
+                    plantingAreaPrice:900,
+                    neighBorhood:'散户',
+                    massifList:[
+                        {
+                            plantingArea:'30亩',
+                            center:[116.94041246165466,37.454730114095334],
+                            LongLat:[[116.94034670,37.45499194],[116.94050788,37.45379093],[116.94134678,37.45381348],[116.94133605,37.45401793],[116.94193297,37.45402736],[116.94188474,37.45550966],[116.94130931,37.45533414]]
+                        },
+                        {
+                            plantingArea:'20亩',
+                            center:[116.93942540873718,37.45210685805599],
+                            LongLat:[[116.93944832,37.45162115],[116.94043241,37.45206986],[116.94088410,37.45196829],[116.94123899,37.45172174],[116.94134111,37.45123627],[116.94038390,37.45108149],[116.93969022,37.45095694]]
+                        },
+                        {
+                            plantingArea:'28亩',
+                            center:[116.94350236643982,37.45072705659411],
+                            LongLat:[[116.94344374,37.44992745],[116.94392249,37.45066093],[116.94440122,37.45110900],[116.94471855,37.45112656],[116.94499821,37.45089273],[116.94523488,37.45095276],[116.94539622,37.45076133],[116.94560054,37.45007581],[116.94348136,37.44966765]]
+                        },
+                        {
+                            plantingArea:'22亩',
+                            center:[116.94672101725769,37.449006527758215],
+                            LongLat:[[116.94695582,37.44806312],[116.94749906,37.44745912],[116.94781111,37.44788569],[116.94900013,37.44910194],[116.94853754,37.44958675]]
+                        }
+                    ]
+                },
+                {
+                    id:2,
+                    village:'郭湾村/魏家村',
+                    name:'郭本林',
+                    plantingAreaTotal:200,
+                    plantingAreaPrice:1200,
+                    neighBorhood:'大户',
+                    massifList:[
+                        //{
+                        //    //1
+                        //    plantingArea:'220亩',
+                        //    center:[116.95929439950561,37.49890089713609],
+                        //    LongLat:[[116.95698564,37.50116834],[116.96009651,37.50119209],[116.96061282,37.49760041],[116.96056970,37.49699581],[116.95924561,37.49689924],[116.95740493,37.49679310]]
+                        //},
+                        //{
+                        //    //2
+                        //    plantingArea:'180亩',
+                        //    center:[116.95420893121337,37.50232259578703],
+                        //    LongLat:[[116.95259487,37.50382413],[116.95279904,37.50117686],[116.95771758,37.50125503],[116.95745952,37.50364675]]
+                        //},
+                        //{
+                        //    //3   
+                        //    plantingArea:'125亩',
+                        //    center:[116.95618303704833,37.49605787402443],
+                        //    LongLat:[[116.95902492,37.49676679],[116.95501010,37.49648587],[116.95512297,37.49521322],[116.95619925,37.49520692],[116.95639285,37.49402382],[116.95870170,37.49424585],[116.95917009,37.49544314]]
+                        //},
+                        //{
+                        //    //4
+                        //    plantingArea:'90亩',
+                        //    center:[116.95075424600219,37.502867329361855],
+                        //    LongLat:[[116.95250878,37.50381545],[116.95081934,37.50389735],[116.95007151,37.50394703],[116.94990461,37.50292513],[116.94979689,37.50183947],[116.95165305,37.50176208],[116.95183591,37.50116648],[116.95272371,37.50118522]]
+                        //},
+                        //{
+                        //    //5
+                        //    plantingArea:'145亩',
+                        //    center:[116.96199806619262,37.50542071501873],
+                        //    LongLat:[[116.96030124,37.50295483],[116.96143161,37.50306803],[116.96147471,37.50337461],[116.96264819,37.50341985],[116.96267514,37.50373065],[116.96289584,37.50373541],[116.96382714,37.50379291],[116.96387578,37.50545309],[116.96339668,37.50554561],[116.96334830,37.50613290],[116.96149656,37.50626487],[116.96146428,37.50636269],[116.96040928,37.50637310],[116.96037691,37.50576009],[116.96042529,37.50518131],[116.96012386,37.50513382]]
+                        //},
+                        //{
+                        //    //6
+                        //    plantingArea:'150亩',
+                        //    center:[116.96294596029662,37.50789926598599],
+                        //    LongLat:[[116.96148044,37.50648191],[116.96341292,37.50635439],[116.96359065,37.50705711],[116.96395138,37.50751339],[116.96424208,37.50748428],[116.96422591,37.50735229],[116.96679390,37.50727329],[116.96729477,37.50868336],[116.96513048,37.50868241],[116.96426913,37.50868889],[116.96425835,37.50859097],[116.96415607,37.50858222],[116.96272413,37.50860443],[116.96162601,37.50859341],[116.96018346,37.50858167],[116.96010800,37.50764084],[116.96156131,37.50765261]]
+                        //},
+                        //{
+                        //    //7
+                        //    plantingArea:'110亩',
+                        //    center:[116.96319969583129,37.5095229717605],
+                        //    LongLat:[[116.96022127,37.50971818],[116.96016194,37.50863269],[116.96416145,37.50863756],[116.96422607,37.50876114],[116.96528662,37.50877642],[116.96565825,37.51019039],[116.96024283,37.51000340]]
+                        //},
+                        //{
+                        //    //8
+                        //    plantingArea:'120亩',
+                        //    center:[116.96702291799926,37.51123544752621],
+                        //    LongLat:[[116.96422623,37.51020828],[116.96588437,37.51026754],[116.96546966,37.50877260],[116.96718172,37.50878524],[116.96786028,37.51033192],[116.96831266,37.51132473],[116.96804889,37.51182205],[116.96799510,37.51221348],[116.96766667,37.51221693],[116.96766134,37.51272764],[116.96705295,37.51274318],[116.96694515,37.51172997],[116.96423708,37.51094037]]
+                        //},
+                        {
+                            //9
+                            plantingArea:'200亩',
+                            center:[116.95461662698364,37.49837315851257],
+                            LongLat:[[116.95287436,37.50106633],[116.95318593,37.49651201],[116.95626400,37.49671408],[116.95584474,37.50114893]]
+                        }
+                    ]
+                }
+            ],
+            currentMonitorIndex:0,
+            currentUrl:'',
+            videoPlayerView:null,
+            videoUrl:'http://daxun.tpddns.cn:81/live/ch377_1_1.m3u8',
+            timeHandle:null
+        },
+        mounted: function() {
+            var _that = this;
+            if(!this.getToken()){
+               //console.log("跳转");
+               window.location = "/Login/Index";
+               return false;
+            }         
+            this.homePageSearch();
+            this.InitAMap();
+            this.getLoginAccountUserInfo();
+            this.showDateTimeClock();
+            this.userName=cookieHelper.get("loginUserName");
+            this.InitChart();            
+            $("#RankingListScrollDiv").mouseover(function(){
+                 //console.log("RankItem-Container_mouseover");
+                 if(_that.scrollRankListTime!=null)
+                    window.clearInterval(_that.scrollRankListTime);
+            });
+            $("#RankingListScrollDiv").mouseout(function(){
+                //console.log("RankItem-Container_mouseout");
+                 _that.scrollRankList();
+            });
+            $(".addIcon").click(function() {
+                _that.customAddPolygonClick();
+            });
+            this.initModules();
+            //this.playVideoM3U8();
+            this.changeVipInfo(0);
+        },
+        methods: {
+            //点击自定义地块
+            customAddPolygonClick(){
+                var _that=this;
+                customAddPolygon(
+                    function(polygon){
+                        _that.addVipDialog=true;
+                    }
+                );
+            },
+            changeVipInfo(index){
+                this.changeYear(-1);
+                this.currentMonitorIndex=index;
+                var vipInfo=this.vipInfos[index];
+                this.currentVipInfo={
+                    id:vipInfo.id,
+                    village:vipInfo.village,
+                    name:vipInfo.name,
+                    plantingAreaTotal:vipInfo.plantingAreaTotal,
+                    plantingAreaPrice:vipInfo.plantingAreaPrice,
+                    neighBorhood:vipInfo.neighBorhood
+                };
+                drawVipInfo(vipInfo,null);
+            },
+            changeMonitor(monitorIndex){
+                this.currentMonitorIndex=monitorIndex;
+                this.videoUrl=this.monitorList[monitorIndex].url;
+                this.changeMapMonitor(monitorIndex);
+                this.playVideoM3U8();
+            },
+            changeMapMonitor(monitorIndex){
+                $(".landName").each(function (index, element) {
+                    if (index == monitorIndex)
+                        $(element).css({ "background-color": "#0f7bc7d1", "border-radius": "10px" });
+                    else
+                        $(element).css({ "background-color": "transparent", "border-radius": "0px" });
+                });            
+            },
+            playMonitor(index){
+                //console.log("playMonitor");
+                //console.log("index="+index);
+                this.changeMonitor(index);
+            },
+            playVideoM3U8(){
+                var _that=this;
+                window.setTimeout(function(){
+                    _that.$nextTick(function(){
+                            if(_that.videoPlayerView==null)
+                            {
+                                _that.videoPlayerView = videojs(
+                                    'myPlayer1', {
+                                        src:_that.videoUrl,
+                                        loop: true,
+                                        controls: true,
+                                        preload: 'auto',
+                                        autoplay: true
+                            });
+                            }
+                            _that.videoPlayerView.src(_that.videoUrl);
+                            _that.videoPlayerView.play();
+                    });
+                },300);
+            },
+            initModules() {
+                var _that=this;
+                var modules=window.localStorage[_that.userName+'modules'];
+                if(modules==null||modules.length<=0||typeof(modules)=='undefined')
+                {
+                    /*apiHelper.getModules(
+                        function(response){
+                            _that.menuModels=response.data.result;
+                            _that.fillMenuModelsArray();
+                            window.localStorage.setItem(_that.userName+'modules',JSON.stringify(_that.menuModels));
+                        }
+                    );*/
+                    _that.readLocalModules();
+                    _that.fillMenuModelsArray();
+                }
+                else
+                {
+                    _that.menuModels=JSON.parse(modules);
+                    _that.fillMenuModelsArray();
+                }
+            },
+            readLocalModules(){
+                var _that=this;
+                $.getJSON(
+                    "/MainMenuModels.json",
+                    function(jsonData){
+                        console.log("readLocalModules");
+                        console.log(jsonData);
+                        _that.menuModels=jsonData.menuModels;
+                        _that.readLocalHideMenus();
+                    }
+                );
+            },
+            readLocalHideMenus(){
+                var _that=this;
+                $.getJSON(
+                    "/HideMenus.json",
+                    function(jsonData){
+                        console.log("readLocalHideMenus");
+                        console.log(jsonData);
+                        _that.hideMenus=jsonData.hideMenus;
+                    }
+                );
+            },
+            fillMenuModelsArray(){
+                var _that=this;
+                if(_that.menuModels==null||typeof(_that.menuModels)=="undefined"||_that.menuModels.length<5)
+                    return false;
+                for(var i=5;i<_that.menuModels.length;i++){
+                    if(_that.currentModelsId==_that.menuModels[i].id){
+                        _that.menuModels[i].uri="#";
+                    }
+                    _that.hideMenus.push(_that.menuModels[i]);
+                }
+            },
+            showPlantAreaForMap(isRefreshMap) {
+                var _that=this;
+                if (_that.globalLandList != null &&
+                    typeof (_that.globalLandList) != "undefined" &&
+                    _that.globalLandList.length != null &&
+                    typeof (_that.globalLandList.length) != "undefined" &&
+                    _that.globalLandList.length > 0
+                ) {
+                    for (var i = 0; i < _that.globalLandList.length; i++) {
+                        var globalLandName = _that.globalLandList[i].landName;
+                        var isHave = false;
+                        var plantingArea = 0;
+                        if (_that.landAllStatisticsList != null && _that.landAllStatisticsList.length > 0) {
+                            for (var j = 0; j < _that.landAllStatisticsList.length; j++) {
+                                var landName = _that.landAllStatisticsList[j].village;
+                                if (globalLandName.indexOf(landName) != -1 || landName.indexOf(globalLandName) != -1) {
+                                    ////console.log("找到了landName" + landName);
+                                    ////console.log("找到了globalLandName" + globalLandName);
+                                    isHave = true;
+                                    plantingArea = _that.landAllStatisticsList[j].plantingAreaStatistics;
+                                    break;
+                                }
+                                else {
+                                    isHave = false;
+                                    ////console.log("没找到landName" + landName);
+                                    ////console.log("没找到globalLandName" + globalLandName);
+                                }
+                            }
+                        }
+                        if (isHave) {
+                            _that.globalLandList[i].plantingArea = plantingArea;
+                        } else {
+                            _that.globalLandList[i].Center=[];
+                        }
+                    }
+                    var landItem = _that.findLandItem(_that.currentLandName);
+                    if (landItem != null && _that.currentLandName != "德平镇")
+                        //drawLand(landItem, true, null);
+                        drawPolygon([landItem]);
+                    else
+                        drawPolygon(_that.globalLandList);
+                }
+            },
+            scrollRankPause() 
+            {
+                var _that = this;
+                if(_that.scrollRankListTime!=null)
+                   window.clearInterval(_that.scrollRankListTime);
+            },
+            scrollRankList() 
+            {
+                var newTop ;
+                var div=$("#RankingListMain");
+                var boxHeight=div.height();
+                var contentHeight=$('#RankingListScrollDiv').height();
+                //$('#weatherWarningRecordListContent').append($('#weatherWarningRecordListContent').html());
+                //使用定时器
+                this.scrollRankListTime = window.setInterval(function(){
+                    var top=div.scrollTop();
+                    ////console.log("top01="+top);
+                    //文本是否已经到底部（底部出现在浏览器窗口中）
+                    if( top>=contentHeight){
+                        ////console.log(top);
+                        //回到0              
+                        div.scrollTop(0);
+                    }else{
+                        //每次在原来的基础上移动
+                        newTop =  top;
+                        div.scrollTop(newTop + 1);
+                    } 
+                },50);
+            },
+            hideLandList(){
+                $(".land-dropdownlist").hide();
+            },
+            landClick(item){
+                var _that=this;
+                _that.currentLandName=item;
+                globalCurrentLandName=item;
+                var landItem=_that.findLandItem(_that.currentLandName);
+                _that.homePageSearch();
+                if(landItem!=null&&_that.currentLandName!="德平镇")
+                    //drawLand(landItem,true,null);
+                    drawPolygon([landItem]);
+                else
+                    drawPolygon(_that.globalLandList);              
+                $(".land-dropdownlist").hide();
+            },
+            findLandItem(landName){
+                var _that=this;
+                var result=null;
+                if(_that.globalLandList!=null&&typeof(_that.globalLandList)!="undefined"){
+                   for(var i=0;i<_that.globalLandList.length;i++){
+                       if(landName==_that.globalLandList[i].landName)
+                          result=_that.globalLandList[i];
+                   }
+                }
+                return result;
+            },
+            showLandList(){
+                if($(".land-dropdownlist").css("display")=="none")
+                   $(".land-dropdownlist").show();
+                else
+                   $(".land-dropdownlist").hide();
+            },
+            changeSearchIndex(index,plantArea){
+                if (this.oldSearchIndex == index) {
+                    this.oldSearchIndex = -1;
+                    this.currentPlantArea = 0;
+                    this.currentSearchIndex = -1;
+                }
+                else if(this.oldSearchIndex != index){ 
+                    this.oldSearchIndex = index;
+                    this.currentPlantArea = plantArea;
+                    this.currentSearchIndex = index;
+                }
+                this.homePageSearch();
+                //if(map!=null)
+                //{
+                //   //console.log("放大");
+                //   map.setZoom(15);
+                //}
+            },
+            changeYear(year){
+                var _that=this;
+                if(year!=-1)
+                {
+                    if (this.oldYear == year) {
+                        this.oldYear = 0;
+                        this.currentYear = 0;
+                    }
+                    else if (this.oldYear != year) {
+                        this.oldYear = year;
+                        this.currentYear = year;
+                    }
+                }
+                else{
+                    this.oldYear = 0;
+                    this.currentYear = -1;
+                }
+                if(year!=-1)
+                   this.homePageSearch();
+                //else {
+                //    //TODO 视频监控
+                //    //alert('显示视频');
+                //    drawMonitor(
+                //        _that.monitorList,
+                //        function(index){
+                //            _that.changeMonitor(index);
+                //        });
+                //    _that.changeMonitor(0);
+                //}
+            },
+            gotoEditPage(){
+                window.location="/LargeGrain/LargeGrain";
+            },
+            homePageSearch() {
+                var _that = this;
+                if(_that.scrollRankListTime!=null)
+                    window.clearInterval(_that.scrollRankListTime);
+                _that.InitLandStatisticsList();
+                _that.InitLandAllList();
+            },
+            InitLandStatisticsList() {
+                var _that = this;
+                if (_that.currentLandName == "德平镇") {
+                    apiHelper.villageStatistics(
+                        _that.currentYear,
+                        _that.Top,
+                        _that.currentPlantArea,
+                        function(response) {
+                            //console.log("villageStatistics");
+                            //console.log(response);
+                            if (response.data.status == 0) {
+                                _that.InitAMap();
+                                _that.landStatisticsList = response.data.result;
+                                if (_that.landStatisticsList == null || _that.landStatisticsList.length <= 0) {
+                                    //console.log("无数据");
+                                    _that.isRankShow = false;
+                                    _that.isRankEmpty = true;
+                                }
+                                else {
+                                    //console.log("有数据");
+                                    _that.isRankShow = true;
+                                    _that.isRankEmpty = false;
+                                    //_that.showPlantAreaForMap(false);
+                                    _that.scrollRankList();
+                                }
+                            }
+                        }
+                    );
+                } else {
+                    apiHelper.largeGrainDetailStatistics(
+                        _that.currentYear,
+                        _that.Top,
+                        _that.currentLandName,
+                        _that.currentPlantArea,
+                        function(response) {
+                            //console.log("villageStatistics");
+                            //console.log(response);
+                            if (response.data.status == 0) {
+                                _that.InitAMap();
+                                _that.landStatisticsList = response.data.result;
+                                if (_that.landStatisticsList == null || _that.landStatisticsList.length <= 0) {
+                                    //console.log("无数据");
+                                    _that.isRankShow = false;
+                                    _that.isRankEmpty = true;
+                                }
+                                else {
+                                    //console.log("有数据");
+                                    _that.isRankShow = true;
+                                    _that.isRankEmpty = false;
+                                    _that.showPlantAreaForMap(false);
+                                    _that.scrollRankList();
+                                }
+                            }
+                        }
+                    );
+                }
+            },
+            InitLandAllList() {
+                var _that = this;
+                if (_that.currentLandName == "德平镇") {
+                    apiHelper.villageStatistics(
+                        _that.currentYear,
+                        0,
+                        _that.currentPlantArea,
+                        function(response) {
+                            //console.log("villageStatistics");
+                            //console.log(response);
+                            if (response.data.status == 0) {
+                                _that.InitAMap();
+                                _that.landAllStatisticsList = response.data.result;
+                                if (_that.landAllStatisticsList == null || _that.landAllStatisticsList.length <= 0) {
+                                    //console.log("无数据");
+                                    _that.isRankShow = false;
+                                    _that.isRankEmpty = true;
+                                }
+                                else {
+                                    //console.log("有数据");
+                                    _that.isRankShow = true;
+                                    _that.isRankEmpty = false;
+                                    _that.showPlantAreaForMap(false);
+                                    //_that.scrollRankList();
+                                }
+                            }
+                        }
+                    );
+                } else {
+                    apiHelper.largeGrainDetailStatistics(
+                        _that.currentYear,
+                        0,
+                        _that.currentLandName,
+                        _that.currentPlantArea,
+                        function(response) {
+                            //console.log("villageStatistics");
+                            //console.log(response);
+                            if (response.data.status == 0) {
+                                _that.InitAMap();
+                                _that.landAllStatisticsList = response.data.result;
+                                if (_that.landAllStatisticsList == null || _that.landAllStatisticsList.length <= 0) {
+                                    //console.log("无数据");
+                                    _that.isRankShow = false;
+                                    _that.isRankEmpty = true;
+                                }
+                                else {
+                                    //console.log("有数据");
+                                    _that.isRankShow = true;
+                                    _that.isRankEmpty = false;
+                                    _that.showPlantAreaForMap(false);
+                                    //_that.scrollRankList();
+                                }
+                            }
+                        }
+                    );
+                }
+            },
+            InitChart(){
+                var _that = this;
+                apiHelper.largeGrainStatistics(
+                    function(response) {
+                        //console.log(response);
+                        if (response.data.status == 0) {
+                            var result = response.data.result;
+                            var year = [];
+                            var yearData = [];
+                            _that.yearList = [];
+                            for (var i = 0; i < result.length; i++) {
+                                year.push(result[i].year);
+                                yearData.push(result[i].plantingAreaStatistics);
+                                _that.yearList.push(parseInt(result[i].year));
+                            }
+                            plantingStatisticsCharts(
+                                "PlantingStatisticsChart",
+                                year,
+                                yearData
+                            );
+                        }
+                    });
+            },
+            getLoginAccountUserInfo() {
+                this.userInfo.Account = apiHelper.getCookie("account");
+                this.userInfo.CompanyId = apiHelper.getCookie("companyId");
+                this.userInfo.Level = apiHelper.getCookie("level");
+                this.userName = this.userInfo.Account;
+                //console.log("getLoginAccountUserInfo");
+                //console.log("userName="+this.userName);
+            },
+            InitLandList(landAry){
+                var _that=this;
+                _that.landList.push("德平镇");
+                for (var i = 0; i < landAry.length; i++)
+                    _that.landList.push(landAry[i].landName);
+            },
+            InitAMap(){
+                var _that=this;
+                initAllChildDistrict(
+                    "AMapContainer",
+                    function(AMap){
+                        _that.amap=AMap;
+                        $.getJSON("/land.json",
+                            function(landDataObj){
+                                //console.log("InitAMap");
+                                //console.log("landDataObj");
+                                //console.log(landDataObj);
+                                //drawPolygon(landDataObj.landData);
+                                _that.globalLandList=landDataObj.landData;
+                                _that.InitLandList(landDataObj.landData);
+                                _that.showPlantAreaForMap(true);
+                            }
+                        );
+                    }
+                );
+            },
+            showDateTimeClock() {
+                var _that = this;
+                var nowDate = new Date();
+                var hours = _that.fixLeadingZero(nowDate.getHours(), 2);
+                var minutes = _that.fixLeadingZero(nowDate.getMinutes(), 2);
+                var seconds = _that.fixLeadingZero(nowDate.getSeconds(), 2);
+                var month = _that.fixLeadingZero(nowDate.getMonth() + 1, 2);
+                var day = _that.fixLeadingZero(nowDate.getDate(), 2);
+                _that.timestr = hours + ":" + minutes + ":" + seconds;
+                _that.datestr = nowDate.getFullYear() + "/" + month + "/" + day;
+                if(_that.timeHandle!=null)
+                   window.clearInterval(_that.timeHandle);
+                _that.timeHandle=window.setInterval(function() {
+                    _that.showDateTimeClock();
+                }, 1000);
+            },
+            fixLeadingZero(value, fixLength) {
+                var str = value.toString();
+                if (str.length < fixLength) {
+                    var len = fixLength - str.length;
+                    var tempStr = "";
+                    for (var i = 0; i < len; i++)
+                        tempStr += "0";
+                    str = tempStr + str;
+                }
+                return str;
+            },
+            getToken(){
+                var token=apiHelper.getCookie("token");
+                var result=true;
+                if(token==null)
+                {
+                    result=false;
+                }
+                else
+                {
+                    apiHelper.token=token;
+                }
+                return result;
+            },
+            showMoreMenu(){
+                if ($(".pop-more-maste-menu").css("display") == "none")
+                    $(".pop-more-maste-menu").show();
+            },
+            hideMoreMenu(){
+                if ($(".pop-more-maste-menu").css("display") != "none")
+                    $(".pop-more-maste-menu").hide();
+            },
+            //退出登录，取消cookie有效时间
+            exitLogin() {
+                //console.log(123)
+                var exp = new Date();
+                exp.setTime(exp.getTime() - 10);
+                document.cookie = "token=" + escape('echo') + ";expires=" + exp.toGMTString() + ";path=/";
+                window.localStorage.removeItem(this.userName+'modules');
+                window.location = "/Login/Index";
+            }
+        }
+    });
+</script>
+}

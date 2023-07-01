@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>土地流转一张图</title>
+    <link rel="stylesheet" href="~/css/NewHome.css" />
+    <link rel="stylesheet" href="~/css/datamanage.css" />
+    <link rel="stylesheet" href="~/lib/element-ui/theme-chalk/index.css" />
+    <link rel="stylesheet" href="~/css/detailPage.css" />
+    <link rel="stylesheet" href="~/css/AveragePrice.css" />
+    <link href="~/css/swiper.min.css" rel="stylesheet" />
+    <script src="~/js/jquery.min.js">
+        import { time } from "console";
+    </script>
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/lib/vue/vue.js"></script>
+    <script type="text/javascript" src="~/lib/element-ui/index.js"></script>
+    <script src="~/js/echarts.min.js"></script>
+    <script src="~/lib/axios/axios.js"></script>
+    <script src="~/js/request.js"></script>
+    <script src="~/js/GPStransform.js"></script>
+    <script src="~/lib/linq/linq.js"></script>
+    <script src="~/js/echarts-collections.js"></script>
+    <script src="~/js/json.js"></script>
+    <script src="~/js/apiHelper.js"></script>
+    <script src="~/js/testData.js"></script>
+    <script src="~/lib/axios/axios.js"></script>
+    <script src="~/lib/moment/moment.js"></script>
+    <script src="~/js/cookieHelper.js"></script>
+    <script src="~/js/DateDiffMethod.js"></script>
+    <script src="~/js/osc_region_new.js"></script>
+    <script src="~/js/ezuikit.js"></script>
+    <link href="~/css/index.css" rel="stylesheet" />    
+    <script type="text/javascript" src="~/js/swiper.min.js"></script>
+    <script type="text/javascript">
+        window._AMapSecurityConfig = {
+            securityJsCode: 'acca991ccaf8f2bb97df91a7bf547a24',
+        }
+    </script>
+    <script type="text/javascript" src="~/lib/amap/loader.js"></script>
+    @*<script type="text/javascript" src="~/js/AMapLoader.js"></script>*@
+    <script type="text/javascript" src="~/js/GPStransform.js"></script>
+    <script type="text/javascript" src="~/js/TiandiTuMapLoader.js"></script>
+    <script type="text/javascript" src="~/lib/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="~/js/echarts-collections.js"></script>
+    <script type="text/javascript" src="~/js/sort.js"></script>
+    <script type="text/javascript" src="~/js/menu.js"></script>
+    
+    <script type="text/javascript" src="http://api.tianditu.gov.cn/api?v=4.0&tk=2a7c617cd0353e40d0fee73327920948"></script>
+    <style type="text/css">
+        #PlantAreaProgress .el-progress-bar .el-progress-bar__outer {
+            background-color: #3a2c2c87;
+        }
+
+        #PlantAreaProgress .el-progress-bar .el-progress-bar__inner {
+            background: linear-gradient(88deg, #0539e9, #159afb);
+        }
+
+        #CountDataDetailProgress .el-progress-bar .el-progress-bar__outer {
+            background-color: #504702;
+        }
+
+        #CountDataDetailProgress .el-progress-bar .el-progress-bar__inner {
+            background: linear-gradient(88deg, #afa325, #f6fb15);
+        }
+        [v-cloak] {
+            display:none;
+        }
+    </style>
+    @RenderSection("Head")
+</head>
+<body>
+    <div style="margin-top:0.6%;" id="app" v-cloak>
+        <el-container>
+            <el-header>
+                <div class="logo">
+                    <div id="titleLeft">
+                        <div class="time-container">
+                            <div class="time-text">
+                                {{timestr}}
+                            </div>
+                            <div class="date-text">
+                                {{datestr}}
+                            </div>
+                        </div>
+                        <div :class="menuModels[0].uri==currentUrl?'title_nav_click':'title_nav_normal'">
+                            @*<a href="http://8.142.16.236:6004/" target="_self">产业一张图</a>*@
+                            <a :href="menuModels[0].uri" target="_self">{{menuModels[0].name}}</a>
+                        </div>
+                        <div :class="menuModels[1].uri==currentUrl?'title_nav_click':'title_nav_normal'">
+                            @*<a href="http://8.142.16.236:6006/" target="_self">智慧大田</a>*@
+                            <a :href="menuModels[1].uri" target="_self">{{menuModels[1].name}}</a>
+                        </div>
+                        <div :class="menuModels[2].uri==currentUrl?'title_nav_click':'title_nav_normal'">
+                            @*<a href="http://8.142.16.236:6009/" target="_self">智慧大棚</a>*@
+                            <a :href="menuModels[2].uri" target="_self">{{menuModels[2].name}}</a>
+                        </div>
+                    </div>
+                    <div id="homeTitle">
+                        <div class="centerTitle"></div>
+                    </div>
+                    <div id="titleRight">
+                        <div :class="menuModels[3].uri==currentUrl?'title_nav_click':'title_nav_normal'">
+                            @*<a href="http://8.142.16.236:6012/" target="_self">智能预警</a>*@
+                            <a :href="menuModels[3].uri" target="_self">{{menuModels[3].name}}</a>
+                        </div>
+                        <div :class="menuModels[4].uri==currentUrl?'title_nav_click':'title_nav_normal'">
+                            @*<a href="http://8.142.16.236:5006/" target="_self">深思大脑</a>*@
+                            <a :href="menuModels[4].uri" target="_self">{{menuModels[4].name}}</a>
+                        </div>
+                        <div @@mouseover="showMoreMenu" id="more-menu" class="title_nav_normal">
+                            更多管理&#9660;
+                            <div @@mouseout="hideMoreMenu" class="pop-more-maste-menu">
+                                <div v-for="(item,index) in hideMenus" class="menu-item">
+                                    <a :href="item.uri" target="_self">
+                                       {{item.name}}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-container">
+                            <img src="~/images/newhome/account.png" />
+                            <div id="userName" :title="userName" class="content">
+                                {{userName}}
+                            </div>
+                            <div class="arrow">
+                                &#9660;
+                            </div>
+                            <!--弹出菜单-->
+                            <div class="pop-menu">
+                                <div @@click="exitLogin" class="pop-menu-item">
+                                    退出
+                                </div>
+                            </div>
+                            <!--/弹出菜单-->
+                        </div>
+                    </div>
+                </div>
+            </el-header>
+            @RenderSection("Body")
+        </el-container>
+        @RenderSection("Dialog")
+    </div>
+</body>
+</html>
+@{
+    string LandId = (string)ViewData["LandId"];
+}
+@RenderSection("VueScript")

@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>土地流转一张图</title>
+    <link rel="stylesheet" href="~/css/NewHome.css" />
+    <link rel="stylesheet" href="~/css/datamanage.css" />
+    <link rel="stylesheet" href="~/lib/element-ui/theme-chalk/index.css" />
+    <script src="~/js/jquery.min.js">
+        import { time } from "console";
+    </script>
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/lib/vue/vue.js"></script>
+    <script type="text/javascript" src="~/lib/element-ui/index.js"></script>
+    <script src="~/js/echarts.min.js"></script>
+    <script src="~/lib/axios/axios.js"></script>
+    <script src="~/js/request.js"></script>
+    <script src="~/js/GPStransform.js"></script>
+    <script src="~/lib/linq/linq.js"></script>
+    <script src="~/js/echarts-collections.js"></script>
+    <script src="~/js/json.js"></script>
+    <script src="~/js/apiHelper.js"></script>
+    <script src="~/js/testData.js"></script>
+    <script src="~/lib/axios/axios.js"></script>
+    <script src="~/lib/moment/moment.js"></script>
+    <script src="~/js/cookieHelper.js"></script>
+    <script src="~/js/menu.js"></script>
+    <link href="~/css/index.css" rel="stylesheet" />
+    @*<script type="text/javascript">
+        window._AMapSecurityConfig = {
+            securityJsCode: 'acca991ccaf8f2bb97df91a7bf547a24',
+        }
+    </script>*@
+    @*<script type="text/javascript" src="~/lib/amap/loader.js"></script>
+    <script type="text/javascript" src="~/js/AMapLoader.js"></script>*@
+    <script type="text/javascript" src="~/lib/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="~/js/echarts-collections.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".goto-page-menu").click(function(){
+               showGotoPageMenu();
+            });
+        });
+        function showGotoPageMenu(){
+            if($(".goto-page-pop-menu").css("display")=="none")
+               $(".goto-page-pop-menu").show();
+            else
+               $(".goto-page-pop-menu").hide();
+        }
+        function gotoPage(ActionUrl){
+            self.location=ActionUrl;
+        }
+    </script>
+    <style type="text/css">
+        [v-cloak] {
+            display:none;
+        }
+    </style>
+    @RenderSection("Head")
+</head>
+<body>
+    <div class="page-body" id="dataManage-main" v-cloak>
+                <div class="logo">
+                    <div id="titleLeft">
+                        <div class="time-container">
+                            <div class="time-text">
+                                {{timestr}}
+                            </div>
+                            <div class="date-text">
+                                {{datestr}}
+                            </div>
+                        </div>
+                        <div v-show="menuModels[0]!=null" :class="menuModels[0].uri==currentUrl?'title_nav_click':'title_nav_normal'">
+                            @*<a href="http://8.142.16.236:6004/" target="_self">产业一张图</a>*@
+                            <a :href="menuModels[0].uri" target="_self">{{menuModels[0].name}}</a>
+                        </div>
+                        <div v-show="menuModels[1]!=null" :class="menuModels[1].uri==currentUrl?'title_nav_click':'title_nav_normal'">
+                            @*<a href="http://8.142.16.236:6006/" target="_self">智慧大田</a>*@
+                            <a :href="menuModels[1].uri" target="_self">{{menuModels[1].name}}</a>
+                        </div>
+                        <div v-show="menuModels[2]!=null" :class="menuModels[2].uri==currentUrl?'title_nav_click':'title_nav_normal'">
+                            @*<a href="http://8.142.16.236:6009/" target="_self">智慧大棚</a>*@
+                            <a :href="menuModels[2].uri" target="_self">{{menuModels[2].name}}</a>
+                        </div>
+                    </div>
+                    <div id="homeTitle">
+                        <div class="centerTitle"></div>
+                    </div>
+                    <div id="titleRight">
+                        <div v-show="menuModels[3]!=null" :class="menuModels[3].uri==currentUrl?'title_nav_click':'title_nav_normal'">
+                            @*<a href="http://8.142.16.236:6012/" target="_self">智能预警</a>*@
+                            <a :href="menuModels[3].uri" target="_self">{{menuModels[3].name}}</a>
+                        </div>
+                        <div v-show="menuModels[4]!=null" :class="menuModels[4].uri==currentUrl?'title_nav_click':'title_nav_normal'">
+                            @*<a href="http://8.142.16.236:5006/" target="_self">深思大脑</a>*@
+                            <a :href="menuModels[4].uri" target="_self">{{menuModels[4].name}}</a>
+                        </div>
+                        <div id="more-menu" class="title_nav_normal">
+                            更多管理&#9660;
+                            <div @@mouseout="hideMoreMenu" class="pop-more-maste-menu">
+                                <div v-for="(item,index) in hideMenus" class="menu-item">
+                                    <a :href="item.uri" target="_self">
+                                       {{item.name}}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-container">
+                            <img src="~/images/newhome/account.png" />
+                            <div id="userName" :title="userName" class="content">
+                                {{userName}}
+                            </div>
+                            <div class="arrow">
+                                &#9660;
+                            </div>
+                            <!--弹出菜单-->
+                            <div class="pop-menu">
+                                <div @@click="exitLogin" class="pop-menu-item">
+                                    退出
+                                </div>
+                            </div>
+                            <!--/弹出菜单-->
+                        </div>
+                    </div>
+                </div>
+      @RenderSection("PageBody")
+    </div>
+</body>
+</html>
+@{
+    string LandId = (string)ViewData["LandId"];
+}
+@RenderSection("VueScript")

@@ -1,0 +1,1293 @@
+{
+  "status": 0,
+  "msg": "",
+  "result": [
+    {
+      "year": 2012,
+      "sowDatas": [
+        {
+          "id": 3728,
+          "regionName": "南燕竹镇",
+          "sowArea": 2121.63,
+          "sowAreaPercentage": 11.3,
+          "yield": 3215,
+          "yieldPercentage": 1.99
+        },
+        {
+          "id": 3734,
+          "regionName": "平舒乡",
+          "sowArea": 1827.63,
+          "sowAreaPercentage": 9.73,
+          "yield": 12305,
+          "yieldPercentage": 7.61
+        },
+        {
+          "id": 3735,
+          "regionName": "解愁乡",
+          "sowArea": 1628.63,
+          "sowAreaPercentage": 8.67,
+          "yield": 13820,
+          "yieldPercentage": 8.55
+        },
+        {
+          "id": 3736,
+          "regionName": "温家庄乡",
+          "sowArea": 1529.63,
+          "sowAreaPercentage": 8.15,
+          "yield": 15335,
+          "yieldPercentage": 9.49
+        },
+        {
+          "id": 3740,
+          "regionName": "马首乡",
+          "sowArea": 1339.63,
+          "sowAreaPercentage": 7.13,
+          "yield": 21395,
+          "yieldPercentage": 13.23
+        },
+        {
+          "id": 3737,
+          "regionName": "景尚乡",
+          "sowArea": 1330.63,
+          "sowAreaPercentage": 7.09,
+          "yield": 16850,
+          "yieldPercentage": 10.42
+        },
+        {
+          "id": 3739,
+          "regionName": "羊头崖乡",
+          "sowArea": 1325.63,
+          "sowAreaPercentage": 7.06,
+          "yield": 19880,
+          "yieldPercentage": 12.3
+        },
+        {
+          "id": 3730,
+          "regionName": "平头镇",
+          "sowArea": 1323.63,
+          "sowAreaPercentage": 7.05,
+          "yield": 6245,
+          "yieldPercentage": 3.86
+        },
+        {
+          "id": 3733,
+          "regionName": "尹灵芝镇",
+          "sowArea": 1269.63,
+          "sowAreaPercentage": 6.76,
+          "yield": 10790,
+          "yieldPercentage": 6.67
+        },
+        {
+          "id": 3732,
+          "regionName": "西洛镇",
+          "sowArea": 1257.63,
+          "sowAreaPercentage": 6.7,
+          "yield": 9275,
+          "yieldPercentage": 5.74
+        },
+        {
+          "id": 3731,
+          "regionName": "松塔镇",
+          "sowArea": 1246.63,
+          "sowAreaPercentage": 6.64,
+          "yield": 7760,
+          "yieldPercentage": 4.8
+        },
+        {
+          "id": 3738,
+          "regionName": "上湖乡",
+          "sowArea": 1231.63,
+          "sowAreaPercentage": 6.56,
+          "yield": 18365,
+          "yieldPercentage": 11.36
+        },
+        {
+          "id": 3729,
+          "regionName": "宗艾镇",
+          "sowArea": 1225.63,
+          "sowAreaPercentage": 6.53,
+          "yield": 4730,
+          "yieldPercentage": 2.93
+        },
+        {
+          "id": 3727,
+          "regionName": "朝阳镇",
+          "sowArea": 120.63,
+          "sowAreaPercentage": 0.64,
+          "yield": 1700,
+          "yieldPercentage": 1.05
+        }
+      ]
+    },
+    {
+      "year": 2013,
+      "sowDatas": [
+        {
+          "id": 3740,
+          "regionName": "马首乡",
+          "sowArea": 1535.63,
+          "sowAreaPercentage": 7.59,
+          "yield": 42605,
+          "yieldPercentage": 9.29
+        },
+        {
+          "id": 3739,
+          "regionName": "羊头崖乡",
+          "sowArea": 1521.63,
+          "sowAreaPercentage": 7.52,
+          "yield": 41090,
+          "yieldPercentage": 8.96
+        },
+        {
+          "id": 3738,
+          "regionName": "上湖乡",
+          "sowArea": 1507.63,
+          "sowAreaPercentage": 7.45,
+          "yield": 39575,
+          "yieldPercentage": 8.63
+        },
+        {
+          "id": 3737,
+          "regionName": "景尚乡",
+          "sowArea": 1493.63,
+          "sowAreaPercentage": 7.39,
+          "yield": 38060,
+          "yieldPercentage": 8.3
+        },
+        {
+          "id": 3736,
+          "regionName": "温家庄乡",
+          "sowArea": 1479.63,
+          "sowAreaPercentage": 7.32,
+          "yield": 36545,
+          "yieldPercentage": 7.97
+        },
+        {
+          "id": 3735,
+          "regionName": "解愁乡",
+          "sowArea": 1465.63,
+          "sowAreaPercentage": 7.25,
+          "yield": 35030,
+          "yieldPercentage": 7.64
+        },
+        {
+          "id": 3734,
+          "regionName": "平舒乡",
+          "sowArea": 1451.63,
+          "sowAreaPercentage": 7.18,
+          "yield": 33515,
+          "yieldPercentage": 7.31
+        },
+        {
+          "id": 3733,
+          "regionName": "尹灵芝镇",
+          "sowArea": 1437.63,
+          "sowAreaPercentage": 7.11,
+          "yield": 32000,
+          "yieldPercentage": 6.98
+        },
+        {
+          "id": 3732,
+          "regionName": "西洛镇",
+          "sowArea": 1423.63,
+          "sowAreaPercentage": 7.04,
+          "yield": 30485,
+          "yieldPercentage": 6.65
+        },
+        {
+          "id": 3731,
+          "regionName": "松塔镇",
+          "sowArea": 1409.63,
+          "sowAreaPercentage": 6.97,
+          "yield": 28970,
+          "yieldPercentage": 6.32
+        },
+        {
+          "id": 3730,
+          "regionName": "平头镇",
+          "sowArea": 1395.63,
+          "sowAreaPercentage": 6.9,
+          "yield": 27455,
+          "yieldPercentage": 5.99
+        },
+        {
+          "id": 3729,
+          "regionName": "宗艾镇",
+          "sowArea": 1381.63,
+          "sowAreaPercentage": 6.83,
+          "yield": 25940,
+          "yieldPercentage": 5.66
+        },
+        {
+          "id": 3728,
+          "regionName": "南燕竹镇",
+          "sowArea": 1367.63,
+          "sowAreaPercentage": 6.76,
+          "yield": 24425,
+          "yieldPercentage": 5.33
+        },
+        {
+          "id": 3727,
+          "regionName": "朝阳镇",
+          "sowArea": 1353.63,
+          "sowAreaPercentage": 6.69,
+          "yield": 22910,
+          "yieldPercentage": 5
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "sowDatas": [
+        {
+          "id": 3740,
+          "regionName": "马首乡",
+          "sowArea": 1731.63,
+          "sowAreaPercentage": 7.54,
+          "yield": 63815,
+          "yieldPercentage": 8.45
+        },
+        {
+          "id": 3739,
+          "regionName": "羊头崖乡",
+          "sowArea": 1717.63,
+          "sowAreaPercentage": 7.48,
+          "yield": 62300,
+          "yieldPercentage": 8.25
+        },
+        {
+          "id": 3738,
+          "regionName": "上湖乡",
+          "sowArea": 1703.63,
+          "sowAreaPercentage": 7.42,
+          "yield": 60785,
+          "yieldPercentage": 8.05
+        },
+        {
+          "id": 3737,
+          "regionName": "景尚乡",
+          "sowArea": 1689.63,
+          "sowAreaPercentage": 7.36,
+          "yield": 59270,
+          "yieldPercentage": 7.84
+        },
+        {
+          "id": 3736,
+          "regionName": "温家庄乡",
+          "sowArea": 1675.63,
+          "sowAreaPercentage": 7.3,
+          "yield": 57755,
+          "yieldPercentage": 7.64
+        },
+        {
+          "id": 3735,
+          "regionName": "解愁乡",
+          "sowArea": 1661.63,
+          "sowAreaPercentage": 7.23,
+          "yield": 56240,
+          "yieldPercentage": 7.44
+        },
+        {
+          "id": 3734,
+          "regionName": "平舒乡",
+          "sowArea": 1647.63,
+          "sowAreaPercentage": 7.17,
+          "yield": 54725,
+          "yieldPercentage": 7.24
+        },
+        {
+          "id": 3733,
+          "regionName": "尹灵芝镇",
+          "sowArea": 1633.63,
+          "sowAreaPercentage": 7.11,
+          "yield": 53210,
+          "yieldPercentage": 7.04
+        },
+        {
+          "id": 3732,
+          "regionName": "西洛镇",
+          "sowArea": 1619.63,
+          "sowAreaPercentage": 7.05,
+          "yield": 51695,
+          "yieldPercentage": 6.84
+        },
+        {
+          "id": 3731,
+          "regionName": "松塔镇",
+          "sowArea": 1605.63,
+          "sowAreaPercentage": 6.99,
+          "yield": 50180,
+          "yieldPercentage": 6.64
+        },
+        {
+          "id": 3730,
+          "regionName": "平头镇",
+          "sowArea": 1591.63,
+          "sowAreaPercentage": 6.93,
+          "yield": 48665,
+          "yieldPercentage": 6.44
+        },
+        {
+          "id": 3729,
+          "regionName": "宗艾镇",
+          "sowArea": 1577.63,
+          "sowAreaPercentage": 6.87,
+          "yield": 47150,
+          "yieldPercentage": 6.24
+        },
+        {
+          "id": 3728,
+          "regionName": "南燕竹镇",
+          "sowArea": 1563.63,
+          "sowAreaPercentage": 6.81,
+          "yield": 45635,
+          "yieldPercentage": 6.04
+        },
+        {
+          "id": 3727,
+          "regionName": "朝阳镇",
+          "sowArea": 1549.63,
+          "sowAreaPercentage": 6.75,
+          "yield": 44120,
+          "yieldPercentage": 5.84
+        }
+      ]
+    },
+    {
+      "year": 2015,
+      "sowDatas": [
+        {
+          "id": 3740,
+          "regionName": "马首乡",
+          "sowArea": 1927.63,
+          "sowAreaPercentage": 7.5,
+          "yield": 85025,
+          "yieldPercentage": 8.08
+        },
+        {
+          "id": 3739,
+          "regionName": "羊头崖乡",
+          "sowArea": 1913.63,
+          "sowAreaPercentage": 7.44,
+          "yield": 83510,
+          "yieldPercentage": 7.93
+        },
+        {
+          "id": 3738,
+          "regionName": "上湖乡",
+          "sowArea": 1899.63,
+          "sowAreaPercentage": 7.39,
+          "yield": 81995,
+          "yieldPercentage": 7.79
+        },
+        {
+          "id": 3737,
+          "regionName": "景尚乡",
+          "sowArea": 1885.63,
+          "sowAreaPercentage": 7.33,
+          "yield": 80480,
+          "yieldPercentage": 7.65
+        },
+        {
+          "id": 3736,
+          "regionName": "温家庄乡",
+          "sowArea": 1871.63,
+          "sowAreaPercentage": 7.28,
+          "yield": 78965,
+          "yieldPercentage": 7.5
+        },
+        {
+          "id": 3735,
+          "regionName": "解愁乡",
+          "sowArea": 1857.63,
+          "sowAreaPercentage": 7.22,
+          "yield": 77450,
+          "yieldPercentage": 7.36
+        },
+        {
+          "id": 3734,
+          "regionName": "平舒乡",
+          "sowArea": 1843.63,
+          "sowAreaPercentage": 7.17,
+          "yield": 75935,
+          "yieldPercentage": 7.21
+        },
+        {
+          "id": 3733,
+          "regionName": "尹灵芝镇",
+          "sowArea": 1829.63,
+          "sowAreaPercentage": 7.12,
+          "yield": 74420,
+          "yieldPercentage": 7.07
+        },
+        {
+          "id": 3732,
+          "regionName": "西洛镇",
+          "sowArea": 1815.63,
+          "sowAreaPercentage": 7.06,
+          "yield": 72905,
+          "yieldPercentage": 6.93
+        },
+        {
+          "id": 3731,
+          "regionName": "松塔镇",
+          "sowArea": 1801.63,
+          "sowAreaPercentage": 7.01,
+          "yield": 71390,
+          "yieldPercentage": 6.78
+        },
+        {
+          "id": 3730,
+          "regionName": "平头镇",
+          "sowArea": 1787.63,
+          "sowAreaPercentage": 6.95,
+          "yield": 69875,
+          "yieldPercentage": 6.64
+        },
+        {
+          "id": 3729,
+          "regionName": "宗艾镇",
+          "sowArea": 1773.63,
+          "sowAreaPercentage": 6.9,
+          "yield": 68360,
+          "yieldPercentage": 6.5
+        },
+        {
+          "id": 3728,
+          "regionName": "南燕竹镇",
+          "sowArea": 1759.63,
+          "sowAreaPercentage": 6.84,
+          "yield": 66845,
+          "yieldPercentage": 6.35
+        },
+        {
+          "id": 3727,
+          "regionName": "朝阳镇",
+          "sowArea": 1745.63,
+          "sowAreaPercentage": 6.79,
+          "yield": 65330,
+          "yieldPercentage": 6.21
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "sowDatas": [
+        {
+          "id": 3740,
+          "regionName": "马首乡",
+          "sowArea": 2123.63,
+          "sowAreaPercentage": 7.46,
+          "yield": 106235,
+          "yieldPercentage": 7.87
+        },
+        {
+          "id": 3739,
+          "regionName": "羊头崖乡",
+          "sowArea": 2109.63,
+          "sowAreaPercentage": 7.41,
+          "yield": 104720,
+          "yieldPercentage": 7.76
+        },
+        {
+          "id": 3738,
+          "regionName": "上湖乡",
+          "sowArea": 2095.63,
+          "sowAreaPercentage": 7.36,
+          "yield": 103205,
+          "yieldPercentage": 7.65
+        },
+        {
+          "id": 3737,
+          "regionName": "景尚乡",
+          "sowArea": 2081.63,
+          "sowAreaPercentage": 7.32,
+          "yield": 101690,
+          "yieldPercentage": 7.54
+        },
+        {
+          "id": 3736,
+          "regionName": "温家庄乡",
+          "sowArea": 2067.63,
+          "sowAreaPercentage": 7.27,
+          "yield": 100175,
+          "yieldPercentage": 7.42
+        },
+        {
+          "id": 3735,
+          "regionName": "解愁乡",
+          "sowArea": 2053.63,
+          "sowAreaPercentage": 7.22,
+          "yield": 98660,
+          "yieldPercentage": 7.31
+        },
+        {
+          "id": 3734,
+          "regionName": "平舒乡",
+          "sowArea": 2039.63,
+          "sowAreaPercentage": 7.17,
+          "yield": 97145,
+          "yieldPercentage": 7.2
+        },
+        {
+          "id": 3733,
+          "regionName": "尹灵芝镇",
+          "sowArea": 2025.63,
+          "sowAreaPercentage": 7.12,
+          "yield": 95630,
+          "yieldPercentage": 7.09
+        },
+        {
+          "id": 3732,
+          "regionName": "西洛镇",
+          "sowArea": 2011.63,
+          "sowAreaPercentage": 7.07,
+          "yield": 94115,
+          "yieldPercentage": 6.97
+        },
+        {
+          "id": 3731,
+          "regionName": "松塔镇",
+          "sowArea": 1997.63,
+          "sowAreaPercentage": 7.02,
+          "yield": 92600,
+          "yieldPercentage": 6.86
+        },
+        {
+          "id": 3730,
+          "regionName": "平头镇",
+          "sowArea": 1983.63,
+          "sowAreaPercentage": 6.97,
+          "yield": 91085,
+          "yieldPercentage": 6.75
+        },
+        {
+          "id": 3729,
+          "regionName": "宗艾镇",
+          "sowArea": 1969.63,
+          "sowAreaPercentage": 6.92,
+          "yield": 89570,
+          "yieldPercentage": 6.64
+        },
+        {
+          "id": 3728,
+          "regionName": "南燕竹镇",
+          "sowArea": 1955.63,
+          "sowAreaPercentage": 6.87,
+          "yield": 88055,
+          "yieldPercentage": 6.53
+        },
+        {
+          "id": 3727,
+          "regionName": "朝阳镇",
+          "sowArea": 1941.63,
+          "sowAreaPercentage": 6.82,
+          "yield": 86540,
+          "yieldPercentage": 6.41
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "sowDatas": [
+        {
+          "id": 3740,
+          "regionName": "马首乡",
+          "sowArea": 2319.63,
+          "sowAreaPercentage": 7.43,
+          "yield": 127445,
+          "yieldPercentage": 7.74
+        },
+        {
+          "id": 3739,
+          "regionName": "羊头崖乡",
+          "sowArea": 2305.63,
+          "sowAreaPercentage": 7.39,
+          "yield": 125930,
+          "yieldPercentage": 7.65
+        },
+        {
+          "id": 3738,
+          "regionName": "上湖乡",
+          "sowArea": 2291.63,
+          "sowAreaPercentage": 7.34,
+          "yield": 124415,
+          "yieldPercentage": 7.56
+        },
+        {
+          "id": 3737,
+          "regionName": "景尚乡",
+          "sowArea": 2277.63,
+          "sowAreaPercentage": 7.3,
+          "yield": 122900,
+          "yieldPercentage": 7.46
+        },
+        {
+          "id": 3736,
+          "regionName": "温家庄乡",
+          "sowArea": 2263.63,
+          "sowAreaPercentage": 7.26,
+          "yield": 121385,
+          "yieldPercentage": 7.37
+        },
+        {
+          "id": 3735,
+          "regionName": "解愁乡",
+          "sowArea": 2249.63,
+          "sowAreaPercentage": 7.21,
+          "yield": 119870,
+          "yieldPercentage": 7.28
+        },
+        {
+          "id": 3734,
+          "regionName": "平舒乡",
+          "sowArea": 2235.63,
+          "sowAreaPercentage": 7.17,
+          "yield": 118355,
+          "yieldPercentage": 7.19
+        },
+        {
+          "id": 3733,
+          "regionName": "尹灵芝镇",
+          "sowArea": 2221.63,
+          "sowAreaPercentage": 7.12,
+          "yield": 116840,
+          "yieldPercentage": 7.1
+        },
+        {
+          "id": 3732,
+          "regionName": "西洛镇",
+          "sowArea": 2207.63,
+          "sowAreaPercentage": 7.08,
+          "yield": 115325,
+          "yieldPercentage": 7
+        },
+        {
+          "id": 3731,
+          "regionName": "松塔镇",
+          "sowArea": 2193.63,
+          "sowAreaPercentage": 7.03,
+          "yield": 113810,
+          "yieldPercentage": 6.91
+        },
+        {
+          "id": 3730,
+          "regionName": "平头镇",
+          "sowArea": 2179.63,
+          "sowAreaPercentage": 6.99,
+          "yield": 112295,
+          "yieldPercentage": 6.82
+        },
+        {
+          "id": 3729,
+          "regionName": "宗艾镇",
+          "sowArea": 2165.63,
+          "sowAreaPercentage": 6.94,
+          "yield": 110780,
+          "yieldPercentage": 6.73
+        },
+        {
+          "id": 3728,
+          "regionName": "南燕竹镇",
+          "sowArea": 2151.63,
+          "sowAreaPercentage": 6.9,
+          "yield": 109265,
+          "yieldPercentage": 6.64
+        },
+        {
+          "id": 3727,
+          "regionName": "朝阳镇",
+          "sowArea": 2137.63,
+          "sowAreaPercentage": 6.85,
+          "yield": 107750,
+          "yieldPercentage": 6.54
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "sowDatas": [
+        {
+          "id": 3740,
+          "regionName": "马首乡",
+          "sowArea": 2515.63,
+          "sowAreaPercentage": 7.41,
+          "yield": 148655,
+          "yieldPercentage": 7.65
+        },
+        {
+          "id": 3739,
+          "regionName": "羊头崖乡",
+          "sowArea": 2501.63,
+          "sowAreaPercentage": 7.37,
+          "yield": 147140,
+          "yieldPercentage": 7.57
+        },
+        {
+          "id": 3738,
+          "regionName": "上湖乡",
+          "sowArea": 2487.63,
+          "sowAreaPercentage": 7.33,
+          "yield": 145625,
+          "yieldPercentage": 7.49
+        },
+        {
+          "id": 3737,
+          "regionName": "景尚乡",
+          "sowArea": 2473.63,
+          "sowAreaPercentage": 7.29,
+          "yield": 144110,
+          "yieldPercentage": 7.42
+        },
+        {
+          "id": 3736,
+          "regionName": "温家庄乡",
+          "sowArea": 2459.63,
+          "sowAreaPercentage": 7.25,
+          "yield": 142595,
+          "yieldPercentage": 7.34
+        },
+        {
+          "id": 3735,
+          "regionName": "解愁乡",
+          "sowArea": 2445.63,
+          "sowAreaPercentage": 7.2,
+          "yield": 141080,
+          "yieldPercentage": 7.26
+        },
+        {
+          "id": 3734,
+          "regionName": "平舒乡",
+          "sowArea": 2431.63,
+          "sowAreaPercentage": 7.16,
+          "yield": 139565,
+          "yieldPercentage": 7.18
+        },
+        {
+          "id": 3733,
+          "regionName": "尹灵芝镇",
+          "sowArea": 2417.63,
+          "sowAreaPercentage": 7.12,
+          "yield": 138050,
+          "yieldPercentage": 7.1
+        },
+        {
+          "id": 3732,
+          "regionName": "西洛镇",
+          "sowArea": 2403.63,
+          "sowAreaPercentage": 7.08,
+          "yield": 136535,
+          "yieldPercentage": 7.03
+        },
+        {
+          "id": 3731,
+          "regionName": "松塔镇",
+          "sowArea": 2389.63,
+          "sowAreaPercentage": 7.04,
+          "yield": 135020,
+          "yieldPercentage": 6.95
+        },
+        {
+          "id": 3730,
+          "regionName": "平头镇",
+          "sowArea": 2375.63,
+          "sowAreaPercentage": 7,
+          "yield": 133505,
+          "yieldPercentage": 6.87
+        },
+        {
+          "id": 3729,
+          "regionName": "宗艾镇",
+          "sowArea": 2361.63,
+          "sowAreaPercentage": 6.96,
+          "yield": 131990,
+          "yieldPercentage": 6.79
+        },
+        {
+          "id": 3728,
+          "regionName": "南燕竹镇",
+          "sowArea": 2347.63,
+          "sowAreaPercentage": 6.92,
+          "yield": 130475,
+          "yieldPercentage": 6.71
+        },
+        {
+          "id": 3727,
+          "regionName": "朝阳镇",
+          "sowArea": 2333.63,
+          "sowAreaPercentage": 6.87,
+          "yield": 128960,
+          "yieldPercentage": 6.64
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "sowDatas": [
+        {
+          "id": 3740,
+          "regionName": "马首乡",
+          "sowArea": 2711.63,
+          "sowAreaPercentage": 7.39,
+          "yield": 169865,
+          "yieldPercentage": 7.58
+        },
+        {
+          "id": 3739,
+          "regionName": "羊头崖乡",
+          "sowArea": 2697.63,
+          "sowAreaPercentage": 7.35,
+          "yield": 168350,
+          "yieldPercentage": 7.51
+        },
+        {
+          "id": 3738,
+          "regionName": "上湖乡",
+          "sowArea": 2683.63,
+          "sowAreaPercentage": 7.31,
+          "yield": 166835,
+          "yieldPercentage": 7.45
+        },
+        {
+          "id": 3737,
+          "regionName": "景尚乡",
+          "sowArea": 2669.63,
+          "sowAreaPercentage": 7.28,
+          "yield": 165320,
+          "yieldPercentage": 7.38
+        },
+        {
+          "id": 3736,
+          "regionName": "温家庄乡",
+          "sowArea": 2655.63,
+          "sowAreaPercentage": 7.24,
+          "yield": 163805,
+          "yieldPercentage": 7.31
+        },
+        {
+          "id": 3735,
+          "regionName": "解愁乡",
+          "sowArea": 2641.63,
+          "sowAreaPercentage": 7.2,
+          "yield": 162290,
+          "yieldPercentage": 7.24
+        },
+        {
+          "id": 3734,
+          "regionName": "平舒乡",
+          "sowArea": 2627.63,
+          "sowAreaPercentage": 7.16,
+          "yield": 160775,
+          "yieldPercentage": 7.18
+        },
+        {
+          "id": 3733,
+          "regionName": "尹灵芝镇",
+          "sowArea": 2613.63,
+          "sowAreaPercentage": 7.12,
+          "yield": 159260,
+          "yieldPercentage": 7.11
+        },
+        {
+          "id": 3732,
+          "regionName": "西洛镇",
+          "sowArea": 2599.63,
+          "sowAreaPercentage": 7.09,
+          "yield": 157745,
+          "yieldPercentage": 7.04
+        },
+        {
+          "id": 3731,
+          "regionName": "松塔镇",
+          "sowArea": 2585.63,
+          "sowAreaPercentage": 7.05,
+          "yield": 156230,
+          "yieldPercentage": 6.97
+        },
+        {
+          "id": 3730,
+          "regionName": "平头镇",
+          "sowArea": 2571.63,
+          "sowAreaPercentage": 7.01,
+          "yield": 154715,
+          "yieldPercentage": 6.91
+        },
+        {
+          "id": 3729,
+          "regionName": "宗艾镇",
+          "sowArea": 2557.63,
+          "sowAreaPercentage": 6.97,
+          "yield": 153200,
+          "yieldPercentage": 6.84
+        },
+        {
+          "id": 3728,
+          "regionName": "南燕竹镇",
+          "sowArea": 2543.63,
+          "sowAreaPercentage": 6.93,
+          "yield": 151685,
+          "yieldPercentage": 6.77
+        },
+        {
+          "id": 3727,
+          "regionName": "朝阳镇",
+          "sowArea": 2529.63,
+          "sowAreaPercentage": 6.89,
+          "yield": 150170,
+          "yieldPercentage": 6.7
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "sowDatas": [
+        {
+          "id": 3740,
+          "regionName": "马首乡",
+          "sowArea": 2907.63,
+          "sowAreaPercentage": 7.37,
+          "yield": 191075,
+          "yieldPercentage": 7.53
+        },
+        {
+          "id": 3739,
+          "regionName": "羊头崖乡",
+          "sowArea": 2893.63,
+          "sowAreaPercentage": 7.34,
+          "yield": 189560,
+          "yieldPercentage": 7.47
+        },
+        {
+          "id": 3738,
+          "regionName": "上湖乡",
+          "sowArea": 2879.63,
+          "sowAreaPercentage": 7.3,
+          "yield": 188045,
+          "yieldPercentage": 7.41
+        },
+        {
+          "id": 3737,
+          "regionName": "景尚乡",
+          "sowArea": 2865.63,
+          "sowAreaPercentage": 7.27,
+          "yield": 186530,
+          "yieldPercentage": 7.35
+        },
+        {
+          "id": 3736,
+          "regionName": "温家庄乡",
+          "sowArea": 2851.63,
+          "sowAreaPercentage": 7.23,
+          "yield": 185015,
+          "yieldPercentage": 7.29
+        },
+        {
+          "id": 3735,
+          "regionName": "解愁乡",
+          "sowArea": 2837.63,
+          "sowAreaPercentage": 7.2,
+          "yield": 183500,
+          "yieldPercentage": 7.23
+        },
+        {
+          "id": 3734,
+          "regionName": "平舒乡",
+          "sowArea": 2823.63,
+          "sowAreaPercentage": 7.16,
+          "yield": 181985,
+          "yieldPercentage": 7.17
+        },
+        {
+          "id": 3733,
+          "regionName": "尹灵芝镇",
+          "sowArea": 2809.63,
+          "sowAreaPercentage": 7.13,
+          "yield": 180470,
+          "yieldPercentage": 7.11
+        },
+        {
+          "id": 3732,
+          "regionName": "西洛镇",
+          "sowArea": 2795.63,
+          "sowAreaPercentage": 7.09,
+          "yield": 178955,
+          "yieldPercentage": 7.05
+        },
+        {
+          "id": 3731,
+          "regionName": "松塔镇",
+          "sowArea": 2781.63,
+          "sowAreaPercentage": 7.05,
+          "yield": 177440,
+          "yieldPercentage": 6.99
+        },
+        {
+          "id": 3730,
+          "regionName": "平头镇",
+          "sowArea": 2767.63,
+          "sowAreaPercentage": 7.02,
+          "yield": 175925,
+          "yieldPercentage": 6.93
+        },
+        {
+          "id": 3729,
+          "regionName": "宗艾镇",
+          "sowArea": 2753.63,
+          "sowAreaPercentage": 6.98,
+          "yield": 174410,
+          "yieldPercentage": 6.87
+        },
+        {
+          "id": 3728,
+          "regionName": "南燕竹镇",
+          "sowArea": 2739.63,
+          "sowAreaPercentage": 6.95,
+          "yield": 172895,
+          "yieldPercentage": 6.81
+        },
+        {
+          "id": 3727,
+          "regionName": "朝阳镇",
+          "sowArea": 2725.63,
+          "sowAreaPercentage": 6.91,
+          "yield": 171380,
+          "yieldPercentage": 6.75
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "sowDatas": [
+        {
+          "id": 3740,
+          "regionName": "马首乡",
+          "sowArea": 3103.63,
+          "sowAreaPercentage": 7.36,
+          "yield": 212285,
+          "yieldPercentage": 7.49
+        },
+        {
+          "id": 3739,
+          "regionName": "羊头崖乡",
+          "sowArea": 3089.63,
+          "sowAreaPercentage": 7.33,
+          "yield": 210770,
+          "yieldPercentage": 7.44
+        },
+        {
+          "id": 3738,
+          "regionName": "上湖乡",
+          "sowArea": 3075.63,
+          "sowAreaPercentage": 7.29,
+          "yield": 209255,
+          "yieldPercentage": 7.38
+        },
+        {
+          "id": 3737,
+          "regionName": "景尚乡",
+          "sowArea": 3061.63,
+          "sowAreaPercentage": 7.26,
+          "yield": 207740,
+          "yieldPercentage": 7.33
+        },
+        {
+          "id": 3736,
+          "regionName": "温家庄乡",
+          "sowArea": 3047.63,
+          "sowAreaPercentage": 7.23,
+          "yield": 206225,
+          "yieldPercentage": 7.28
+        },
+        {
+          "id": 3735,
+          "regionName": "解愁乡",
+          "sowArea": 3033.63,
+          "sowAreaPercentage": 7.19,
+          "yield": 204710,
+          "yieldPercentage": 7.22
+        },
+        {
+          "id": 3734,
+          "regionName": "平舒乡",
+          "sowArea": 3019.63,
+          "sowAreaPercentage": 7.16,
+          "yield": 203195,
+          "yieldPercentage": 7.17
+        },
+        {
+          "id": 3733,
+          "regionName": "尹灵芝镇",
+          "sowArea": 3005.63,
+          "sowAreaPercentage": 7.13,
+          "yield": 201680,
+          "yieldPercentage": 7.12
+        },
+        {
+          "id": 3732,
+          "regionName": "西洛镇",
+          "sowArea": 2991.63,
+          "sowAreaPercentage": 7.09,
+          "yield": 200165,
+          "yieldPercentage": 7.06
+        },
+        {
+          "id": 3731,
+          "regionName": "松塔镇",
+          "sowArea": 2977.63,
+          "sowAreaPercentage": 7.06,
+          "yield": 198650,
+          "yieldPercentage": 7.01
+        },
+        {
+          "id": 3730,
+          "regionName": "平头镇",
+          "sowArea": 2963.63,
+          "sowAreaPercentage": 7.03,
+          "yield": 197135,
+          "yieldPercentage": 6.96
+        },
+        {
+          "id": 3729,
+          "regionName": "宗艾镇",
+          "sowArea": 2949.63,
+          "sowAreaPercentage": 6.99,
+          "yield": 195620,
+          "yieldPercentage": 6.9
+        },
+        {
+          "id": 3728,
+          "regionName": "南燕竹镇",
+          "sowArea": 2935.63,
+          "sowAreaPercentage": 6.96,
+          "yield": 194105,
+          "yieldPercentage": 6.85
+        },
+        {
+          "id": 3727,
+          "regionName": "朝阳镇",
+          "sowArea": 2921.63,
+          "sowAreaPercentage": 6.93,
+          "yield": 192590,
+          "yieldPercentage": 6.8
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "sowDatas": [
+        {
+          "id": 3740,
+          "regionName": "马首乡",
+          "sowArea": 3299.63,
+          "sowAreaPercentage": 7.35,
+          "yield": 233495,
+          "yieldPercentage": 7.46
+        },
+        {
+          "id": 3739,
+          "regionName": "羊头崖乡",
+          "sowArea": 3285.63,
+          "sowAreaPercentage": 7.31,
+          "yield": 231980,
+          "yieldPercentage": 7.41
+        },
+        {
+          "id": 3738,
+          "regionName": "上湖乡",
+          "sowArea": 3271.63,
+          "sowAreaPercentage": 7.28,
+          "yield": 230465,
+          "yieldPercentage": 7.36
+        },
+        {
+          "id": 3737,
+          "regionName": "景尚乡",
+          "sowArea": 3257.63,
+          "sowAreaPercentage": 7.25,
+          "yield": 228950,
+          "yieldPercentage": 7.31
+        },
+        {
+          "id": 3736,
+          "regionName": "温家庄乡",
+          "sowArea": 3243.63,
+          "sowAreaPercentage": 7.22,
+          "yield": 227435,
+          "yieldPercentage": 7.26
+        },
+        {
+          "id": 3735,
+          "regionName": "解愁乡",
+          "sowArea": 3229.63,
+          "sowAreaPercentage": 7.19,
+          "yield": 225920,
+          "yieldPercentage": 7.22
+        },
+        {
+          "id": 3734,
+          "regionName": "平舒乡",
+          "sowArea": 3215.63,
+          "sowAreaPercentage": 7.16,
+          "yield": 224405,
+          "yieldPercentage": 7.17
+        },
+        {
+          "id": 3733,
+          "regionName": "尹灵芝镇",
+          "sowArea": 3201.63,
+          "sowAreaPercentage": 7.13,
+          "yield": 222890,
+          "yieldPercentage": 7.12
+        },
+        {
+          "id": 3732,
+          "regionName": "西洛镇",
+          "sowArea": 3187.63,
+          "sowAreaPercentage": 7.1,
+          "yield": 221375,
+          "yieldPercentage": 7.07
+        },
+        {
+          "id": 3731,
+          "regionName": "松塔镇",
+          "sowArea": 3173.63,
+          "sowAreaPercentage": 7.06,
+          "yield": 219860,
+          "yieldPercentage": 7.02
+        },
+        {
+          "id": 3730,
+          "regionName": "平头镇",
+          "sowArea": 3159.63,
+          "sowAreaPercentage": 7.03,
+          "yield": 218345,
+          "yieldPercentage": 6.97
+        },
+        {
+          "id": 3729,
+          "regionName": "宗艾镇",
+          "sowArea": 3145.63,
+          "sowAreaPercentage": 7,
+          "yield": 216830,
+          "yieldPercentage": 6.93
+        },
+        {
+          "id": 3728,
+          "regionName": "南燕竹镇",
+          "sowArea": 3131.63,
+          "sowAreaPercentage": 6.97,
+          "yield": 215315,
+          "yieldPercentage": 6.88
+        },
+        {
+          "id": 3727,
+          "regionName": "朝阳镇",
+          "sowArea": 3117.63,
+          "sowAreaPercentage": 6.94,
+          "yield": 213800,
+          "yieldPercentage": 6.83
+        }
+      ]
+    }
+  ]
+}

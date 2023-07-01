@@ -1,0 +1,235 @@
+﻿.ddlFilterCriteria {
+    width: 6%;
+    height: 4.5vh;
+    border: 0px solid red;
+}
+
+.txtPlantingArea {
+    width: 7%;
+    height: 4.5vh;
+    float: left;
+    margin-left: 0.5vw;
+    border: 0px solid red;
+}
+
+.ddlSelectedYear {
+    width: 7%;
+    height: 4.5vh;
+    float: left;
+    margin-left: 0.5vw;
+    border: 0px solid red;
+}
+
+.LargeGrainDialog {
+    width: 35vw;
+    height: 72vh;
+    position: relative;
+}
+
+    .LargeGrainDialog .dialog {
+        width: 100%;
+        height: 52vh;
+        margin-top: -15px;
+        border: 0px solid red;
+    }
+
+        .LargeGrainDialog .dialog .line-container {
+            width: 98%;
+            height: 5vh;
+            line-height: 4.6vh;
+            font-family: "Microsoft YaHei UI";
+            font-size: 0.9vw;
+            background-color: #ffffff;
+            border-radius: 6px;
+            margin-left: 1%;
+            margin-top: 1%;
+            border: 0px solid red;
+        }
+
+            .LargeGrainDialog .dialog .line-container .label {
+                width: 21%;
+                height: 4.8vh;
+                color: #37799f;
+                font-weight: 700;
+                text-align: center;
+                float: left;
+                border: 0px solid red;
+            }
+
+            .LargeGrainDialog .dialog .line-container .label-must {
+                width: 21%;
+                height: 4.8vh;
+                color: #cf1425;
+                font-weight: 700;
+                text-align: center;
+                float: left;
+                border: 0px solid red;
+            }
+
+            .LargeGrainDialog .dialog .line-container .input-container {
+                width: 78%;
+                height: 4vh;
+                float: left;
+                border: 0px solid red;
+            }
+
+                .LargeGrainDialog .dialog .line-container .input-container .el-input-custom {
+                    border-radius: 5px;
+                    height: 4vh;
+                    margin-top: 0.3vh;
+                    background-color: #092166;
+                }
+
+                    .LargeGrainDialog .dialog .line-container .input-container .el-input-custom .el-input__inner {
+                        height: 4vh;
+                        line-height: 4vh;
+                        font-size: 0.9vw;
+                    }
+
+    .LargeGrainDialog .tips {
+        width: 98%;
+        height: 2vh;
+        font-family: "Microsoft YaHei UI";
+        font-size: 0.5vw;
+        color: red;
+        text-align: left;
+        text-indent: 1%;
+        margin-left: 1%;
+        margin-top: 0.5vh;
+        border: 0px solid red;
+    }
+
+    .LargeGrainDialog .control-container {
+        width: 45%;
+        height: 4.3vh;
+        position: absolute;
+        top: 32vw;
+        left: 18vh;
+        border: 0px solid red;
+    }
+
+@media (max-width:2059px) {
+    .LargeGrainDialog .control-container {
+        top: 30vw;
+        left: 18vh;
+    }
+}
+
+@media (max-width:2041px) {
+    .LargeGrainDialog .control-container {
+        top: 28vw;
+        left: 23vh;
+    }
+}
+
+@media (max-width:2044px) {
+    .LargeGrainDialog .control-container {
+        top: 28vw;
+        left: 23vh;
+    }
+}
+
+@media (max-width:2011px) {
+    .LargeGrainDialog .control-container {
+        top: 26vw;
+        left: 23vh;
+    }
+}
+
+@media (max-width:1920px) {
+    .LargeGrainDialog .control-container {
+        top: 33vw;
+        left: 21vh;
+    }
+}
+
+@media (max-width:1884px) {
+    .LargeGrainDialog .control-container {
+        top: 27vw;
+        left: 23vh;
+    }
+}
+
+@media (max-width:1692px) {
+    .LargeGrainDialog .control-container {
+        top: 33vw;
+        left: 18vh;
+    }
+}
+
+@media (max-width:1602px) {
+    .LargeGrainDialog .control-container {
+        top: 32vw;
+        left: 18vh;
+    }
+}
+
+@media (max-width:1577px) {
+    .LargeGrainDialog .control-container {
+        top: 30vw;
+        left: 18vh;
+    }
+}
+
+@media (max-width:1497px) {
+    .LargeGrainDialog .control-container {
+        top: 31vw;
+        left: 18vh;
+    }
+}
+
+@media (max-width:1367px) {
+    .LargeGrainDialog .control-container {
+        top: 30vw;
+        left: 18vh;
+    }
+}
+
+@media (max-width:1257px) {
+    .LargeGrainDialog .control-container {
+        top: 32vw;
+        left: 22vh;
+    }
+}
+
+.LargeGrainDialog .control-container .btnSave {
+    width: 7vw;
+    height: 4vh;
+    line-height: 4vh;
+    color: #FFF;
+    background-color: #409EFF;
+    border-color: #409EFF;
+    border-radius: 15px;
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    font-size: 0.8vw;
+}
+
+.LargeGrainDialog .control-container .btnClear {
+    width: 8vw;
+    height: 4vh;
+    line-height: 4vh;
+    background: #f78989;
+    border-color: #f78989;
+    color: #FFF;
+    border-radius: 15px;
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    font-size: 0.8vw;
+    margin-left: 0.5vw;
+}
+
+.searchLabel {
+    width: 4vw;
+    height: 4.5vh;
+    line-height: 4.5vh;
+    font-family: "Microsoft YaHei UI";
+    font-size: 0.8vw;
+    color: #C0C4CC;
+    text-align: center;
+    margin-left: 0.5%;
+    border: 0px solid red;
+    float: left;
+}
